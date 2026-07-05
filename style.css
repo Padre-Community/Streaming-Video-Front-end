@@ -13,3 +13,8 @@ header, footer, .container{
 	width: 1000px;
 	margin: auto;
 }
+header.Banner
+{
+	border-bottom: 1px solid #cccccc;
+	text-align: center;
+}
