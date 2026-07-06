@@ -12,7 +12,7 @@ No nosso ecossistema, as responsabilidades de cada componente dentro de uma func
 
 - **O que é:** O componente visual puro em React (`.tsx`).
 - **Regra de Ouro:** A View **não possui lógica de negócios, não faz requisições à API e não manipula dados brutos**. Ela apenas consome o estado exposto pela _ViewModel_ e renderiza elementos na tela. Ela recebe interações do usuário (como cliques) e repassa para as funções da _ViewModel_.
-
+ 
 ### 🧠 ViewModel (O Estado e a Lógica)
 
 - **O que é:** Um Custom Hook do React (`use[Funcionalidade]ViewModel.ts`).
