@@ -1,4 +1,5 @@
-````markdown
+
+```markdown
 # 🌐 Loid Community — Front-End Workspace
 
 <p align="center">
@@ -13,7 +14,7 @@
 
 ## 🚀 Sobre o Projeto
 
-Bem-vindo ao ecossistema de Front-end da **Loid Community**! Este é um ambiente de desenvolvimento colaborativo e focado em alta performance, construído inteiramente pela nossa comunidade.
+Bem-vindo ao ecossistema de Front-end da **Loid Community**! Este é um ambiente de desenvolvimento colaborativo e focado em alta performance, construído inteiramente pela nossa comunidade. 
 
 A aplicação foi desenhada utilizando **React.js com Vite** para garantir builds instantâneos e uma experiência de desenvolvimento extremamente veloz, estruturada sob as regras rígidas do **TypeScript** e estilizada com a eficiência do **Tailwind CSS**.
 
@@ -21,24 +22,21 @@ A aplicação foi desenhada utilizando **React.js com Vite** para garantir build
 
 ## 🏗️ 1. Arquitetura do Sistema: MVVM
 
-Para garantir que múltiplas squads consigam trabalhar no mesmo repositório sem gerar conflitos de código, adotamos o padrão arquitetural **MVVM (Model-View-ViewModel)**.
+Para garantir que múltiplas squads consigam trabalhar no mesmo repositório sem gerar conflitos de código, adotamos o padrão arquitetural **MVVM (Model-View-ViewModel)**. 
 
 A divisão de responsabilidades é cirúrgica:
 
 ### 📺 View (A Interface)
-
-- **O que é:** Componentes visuais puros (`.tsx`).
-- **Regra:** **Zero lógica de negócios ou requisições de API.** A View apenas consome o estado exposto pela _ViewModel_ e renderiza os elementos na tela. Interações do usuário (como cliques) apenas disparam funções da _ViewModel_.
+* **O que é:** Componentes visuais puros (`.tsx`).
+* **Regra:** **Zero lógica de negócios ou requisições de API.** A View apenas consome o estado exposto pela *ViewModel* e renderiza os elementos na tela. Interações do usuário (como cliques) apenas disparam funções da *ViewModel*.
 
 ### 🧠 ViewModel (O Estado e a Lógica)
-
-- **O que é:** Custom Hooks do React (`use[Funcionalidade]ViewModel.ts`).
-- **Regra:** É o cérebro da tela. Gerencia estados (`useState`), ciclos de vida (`useEffect`) e expõe apenas as variáveis e funções necessárias para a View. Ela consome a camada de _Model_ para tratar os dados.
+* **O que é:** Custom Hooks do React (`use[Funcionalidade]ViewModel.ts`).
+* **Regra:** É o cérebro da tela. Gerencia estados (`useState`), ciclos de vida (`useEffect`) e expõe apenas as variáveis e funções necessárias para a View. Ela consome a camada de *Model* para tratar os dados.
 
 ### 🗄️ Model (Os Dados e Serviços)
-
-- **O que é:** Tipagens TypeScript (`interfaces`), mapeamento de dados (Mappers/Adapters) e contratos de API.
-- **Regra:** Lida diretamente com as regras de negócio cruas e com a comunicação direta com o nosso Back-end.
+* **O que é:** Tipagens TypeScript (`interfaces`), mapeamento de dados (Mappers/Adapters) e contratos de API.
+* **Regra:** Lida diretamente com as regras de negócio cruas e com a comunicação direta com o nosso Back-end.
 
 ---
 
@@ -61,8 +59,8 @@ src/
         ├── services/     # Requisições de API específicas do módulo
         ├── viewmodels/   # useLoginViewModel.ts (Toda a lógica do hook)
         └── views/        # LoginView.tsx (A interface visual estrita)
+
 ```
-````
 
 ---
 
@@ -72,49 +70,49 @@ Siga os passos abaixo para rodar o projeto localmente na sua máquina:
 
 ### 📋 Pré-requisitos
 
-- **Node.js** (Versão 18 LTS ou superior)
-- **Git**
-- **NPM** (Gerenciador de pacotes padrão)
+* **Node.js** (Versão 18 LTS ou superior)
+* **Git**
+* **NPM** (Gerenciador de pacotes padrão)
 
 ### 🚀 Instalação e Execução
 
 1. **Clone o repositório da Organização:**
-
 ```bash
 git clone [https://github.com/](https://github.com/)[sua-organizacao]/[seu-repositorio-frontend].git
 
 ```
 
-2. **Acesse a pasta do projeto:**
 
+2. **Acesse a pasta do projeto:**
 ```bash
 cd [nome-da-pasta]
 
 ```
 
-3. **Instale todas as dependências:**
 
+3. **Instale todas as dependências:**
 ```bash
 npm install
 
 ```
 
-4. **Configure as Variáveis de Ambiente:**
-   Crie um arquivo `.env` na raiz do projeto e insira a URL do Back-end fornecida pelo seu Tech Lead:
 
+4. **Configure as Variáveis de Ambiente:**
+Crie um arquivo `.env` na raiz do projeto e insira a URL do Back-end fornecida pelo seu Tech Lead:
 ```env
 VITE_API_URL=http://localhost:3000
 
 ```
 
-5. **Inicie o servidor de desenvolvimento:**
 
+5. **Inicie o servidor de desenvolvimento:**
 ```bash
 npm run dev
 
 ```
 
-_Abra o navegador no endereço indicado pelo terminal (geralmente `http://localhost:5173`)._
+
+*Abra o navegador no endereço indicado pelo terminal (geralmente `http://localhost:5173`).*
 
 ---
 
@@ -122,11 +120,13 @@ _Abra o navegador no endereço indicado pelo terminal (geralmente `http://localh
 
 Para manter a organização do Kanban e evitar quebras na ramificação principal, jogaremos sob estas regras:
 
-- **`main`:** Código 100% estável. **Ninguém comita direto aqui.**
-- **`develop`:** Ambiente de integração das squads. Todas as features se encontram aqui.
-- **Branches de Task (`feature/` ou `fix/`):** Crie sempre a partir da `develop`.
-- _Padrão de nomenclatura:_ `feature/nome-da-squad/titulo-da-task`
-- _Exemplo:_ `git checkout -b feature/akatsuki/input-senha`
+* **`main`:** Código 100% estável. **Ninguém comita direto aqui.**
+* **`develop`:** Ambiente de integração das squads. Todas as features se encontram aqui.
+* **Branches de Task (`feature/` ou `fix/`):** Crie sempre a partir da `develop`.
+* *Padrão de nomenclatura:* `feature/nome-da-squad/titulo-da-task`
+* *Exemplo:* `git checkout -b feature/akatsuki/input-senha`
+
+
 
 ### 🔄 Pull Requests e Code Review
 
