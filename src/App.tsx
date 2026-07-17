@@ -1,6 +1,6 @@
 import "./App.css";
 import Button from "./module/auth/components/Button";
-import Input from "./module/auth/components/input";
+import Input from "./module/auth/components/Input";
 function App() {
   return (
     <div className="flex justify-center flex-col m-24 px-24 text-center  ">
