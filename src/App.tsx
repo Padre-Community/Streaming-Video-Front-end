@@ -1,11 +1,14 @@
 import "./App.css";
+import Button from "./module/auth/components/Button";
 function App() {
   return (
-    <>
-      <h1 className="text-5xl font-bold underline  h-screen flex items-center justify-center">
+    <div className="flex justify-center flex-col m-24 px-24 text-center  ">
+      <h1 className="text-5xl font-bold flex items-center mb-8 justify-center">
         Streaming Video Front-end esta rodando, pho 🚀
       </h1>
-    </>
+      <Button text={"Login"}/>
+      <Button text={"Criar conta nova"}/>
+    </div>
   );
 }
 
