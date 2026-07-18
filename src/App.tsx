@@ -7,7 +7,7 @@ function App() {
       <h1 className="text-5xl font-bold flex items-center mb-8 justify-center">
         Streaming Video Front-end esta rodando, pho 🚀
       </h1>
-      <Input text={"testandoo"} />
+      <Input label={"E-mail "} placeholder={"digite seu email"} />
       <Button text={"Login"} />
       <Button text={"Criar conta nova"} />
     </div>
