@@ -1,20 +1,33 @@
-export function Input({
-  placeholder,
-  label,
-}: {
+type InputProps = {
+  id: string;
   label: string;
   placeholder: string;
-}) {
+  type?: "text" | "email" | "password" | "number";
+  required?: boolean;
+  disabled?: boolean;
+};
+export function Input({
+  id,
+  label,
+  placeholder,
+  type = "text",
+  required = false,
+  disabled = false,
+}: InputProps) {
   return (
-    <div className=" flex flex-col gap-x-2 p-3 m-2">
-      <label className=" flex justify-">{label}</label>
+    <div className=" flex flex-col gap-2 m-2">
+      <label htmlFor={id} className="text-base">
+        {label}
+      </label>
       <input
-        className="  p-3 rounded-xl bg-white hover:text-black hover:bg-gray-50  outline-1 outline-red-600 text-xl "
-        type="text"
+        id={id}
+        type={type}
         placeholder={placeholder}
+        required={required}
+        disabled={disabled}
+        className="  p-3 rounded-xl bg-white hover:text-black hover:bg-gray-50  outline-1 outline-red-600 text-xl "
       />
     </div>
   );
 }
-
 export default Input;
