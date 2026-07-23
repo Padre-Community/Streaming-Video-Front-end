@@ -1,4 +1,3 @@
-import "./App.css";
 import Button from "./module/auth/components/Button";
 import Input from "./module/auth/components/Input";
 function App() {

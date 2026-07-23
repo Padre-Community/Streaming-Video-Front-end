@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Oswald", sans-serif;
+}
+
+@layer base {
+    html {
+        font-family: var(--font-sans);
+    }
+}
