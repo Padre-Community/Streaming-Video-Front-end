@@ -1,10 +1,10 @@
-import Input from "./Input";
+import Input from "../components/Input";
 
 export default function Navbar() {
   return <header>
     <nav className="flex justify-between ">
       <img src="logo.png" alt="logo" />
-      <Input  label="" placeholder="procurar video..." />
+      <Input   id="email" label="" placeholder="procurar video..." />
       
       
       <button className="flex justify-between">
