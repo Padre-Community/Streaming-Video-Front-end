@@ -12,7 +12,7 @@ export default function App() {
       </h1>
       <Input id="email" label={"E-mail "} placeholder={"digite seu email"} />
       <Button text={"Login"}/>
-      <Button text={"Criando uma conta nova"}/>
+      <Button text={"Criar uma nova conta"}/>
       </div>
   )
       
