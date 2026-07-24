@@ -9,7 +9,6 @@ function App() {
       </h1>
       <Input 
       id= "email"
-      label= "email"
       placeholder="digite seu email" />
 
       <Button text={"Login"} />
