@@ -10,7 +10,7 @@ export const bannerMock: Banner[] = [
   {
     thumbnail_Url:
       "https://variety.com/wp-content/uploads/2020/12/blade-runner-2049-image.jpg?w=1000&h=563&crop=1",
-    title: "Blade Runner",
+    title: "Blade Runner 2049",
     category: "Sci-Fi",
     description:
       "Blade Runner é uma clássica obra de ficção científica que retrata um futuro distópico, acompanhando um policial encarregado de caçar androides rebeldes",
