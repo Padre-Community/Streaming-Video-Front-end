@@ -13,10 +13,10 @@ export const UIbutton = ({
   onClick,
 }: ButtonProps) => {
   const base =
-    "px-4 py-2 rounded-md font-semibold flex items-center justify-center gap-2 transition-all";
+    "px-4 py-2 font-semibold flex items-center justify-center gap-2 transition-all";
   const variants = {
     primary: "bg-red-600 hover:bg-red-700 text-white",
-    secondary: "bg-gray-500/40 hover:bg-gray-500/60 text-white backdrop-blur",
+    secondary: "bg-gray-500/40 hover:bg-gray-500/30 text-white backdrop-blur",
   };
   return (
     <button
