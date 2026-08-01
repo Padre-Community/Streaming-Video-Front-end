@@ -1,9 +1,3 @@
-import "./App.css";
-import AppRoutes from "./routes";
-
-function App() {
-  return (
-      <AppRoutes />
 import Button from "./module/auth/components/Button";
 import Input from "./module/auth/components/Input";
 function App() {
