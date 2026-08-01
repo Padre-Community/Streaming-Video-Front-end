@@ -1,14 +1,12 @@
 type InputProps = {
   id: string;
-  label: string;
-  placeholder: string;
+  placeholder?: string;
   type?: "text" | "email" | "password" | "number";
   required?: boolean;
   disabled?: boolean;
 };
 export function Input({
   id,
-  label,
   placeholder,
   type = "text",
   required = false,
@@ -16,9 +14,6 @@ export function Input({
 }: InputProps) {
   return (
     <div className=" flex flex-col gap-2 m-2">
-      <label htmlFor={id} className="text-base">
-        {label}
-      </label>
       <input
         id={id}
         type={type}
