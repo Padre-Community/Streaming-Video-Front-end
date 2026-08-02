@@ -7,9 +7,9 @@ export default function UploadVideoCard({
   handleOpen: () => void;
 }) {
   return (
-    <div className="bg-black border border-zinc-500 p-4 inline-block rounded-[0.5rem] flex flex-col">
+    <div className="bg-black border border-zinc-500 p-4 inline-block rounded-[0.5rem] flex flex-col z-1">
       <div className="flex justify-between mb-8">
-        <h2 className="flex items-center justify-center text-white text-2xl gap-2">
+        <h2 className="flex items-center justify-center text-white text-2xl gap-2 font-bold">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24px"
