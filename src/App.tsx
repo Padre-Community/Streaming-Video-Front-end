@@ -9,8 +9,12 @@ function App() {
   return (
     <>
       <UIbutton onClick={handleOpen}>Publicar Vídeo</UIbutton>
-      {isOpen && <UploadVideoCard handleOpen={handleOpen}></UploadVideoCard>}
-      {/*<AppRoutes />; */}
+      <div className="grid place-items-center">
+        {isOpen && <UploadVideoCard handleOpen={handleOpen}></UploadVideoCard>}
+        {/*<AppRoutes />; */}
+
+        {/* Isso daqui deve ser retirado antes de enviar para o pull request */}
+      </div>
     </>
   );
 }
