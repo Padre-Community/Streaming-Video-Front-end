@@ -13,7 +13,7 @@ export const Banner = () => {
       />
       <div className="absolute bottom-0 left-0 right-0 h-50 bg-gradient-to-t from-black/90 to-tranparent pointer-events-none"></div>
       <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-gradient-to-r from-black via-black/60 to-transparent text-white">
-        <div className="flex items-center gap-2">
+         <div className="flex items-center gap-2">
           {featuredBanner.isInDestaque && (
             <span className="inline-flex gap-1.5 px-2 py-0.5 text-[9px] font-black uppercase tracking-widest text-white bg-red-600 rounded mb-2">
               <svg
