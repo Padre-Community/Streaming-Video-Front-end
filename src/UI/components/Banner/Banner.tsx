@@ -1,11 +1,11 @@
 import { bannerMock } from "./mocks/bannerMock";
-import { UIbutton } from "./Button";
+import { UIbutton } from "../Button/Button";
 
 export const Banner = () => {
   const featuredBanner =
     bannerMock.find((item) => item.isInDestaque) || bannerMock[0];
   return (
-    <section className="relative w-full h-[580px] rounded-3xl overflow-hidden">
+    <section className="relative w-[80%] mx-auto h-145 rounded-3xl overflow-hidden">
       <img
         src={featuredBanner.thumbnail_Url}
         alt={featuredBanner.title}
@@ -43,7 +43,7 @@ export const Banner = () => {
         </p>
 
         <div className="flex items-center gap-4 mt-5 my-5">
-          <UIbutton variant="primary" className="rounded-full">
+          <UIbutton variant="primary" className="rounded-full cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -63,7 +63,7 @@ export const Banner = () => {
 
           <UIbutton
             variant="secondary"
-            className="bg-transparent border border-zinc-800 rounded-full"
+            className="bg-transparent border border-zinc-800 rounded-full cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
