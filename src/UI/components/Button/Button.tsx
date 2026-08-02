@@ -2,7 +2,7 @@ import React from "react";
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "third";
   className?: string;
   onClick?: () => void;
 }
@@ -17,6 +17,7 @@ export const UIbutton = ({
   const variants = {
     primary: "bg-red-600 hover:bg-red-700 text-white",
     secondary: "bg-gray-500/40 hover:bg-gray-500/30 text-white backdrop-blur",
+    third: "bg-black text-white hover:cursor-pointer",
   };
   return (
     <button
