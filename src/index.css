@@ -8,6 +8,8 @@
 
 @layer base {
     html {
+        background: black;
+        color: white;
         font-family: var(--font-roboto);
     }
 }
