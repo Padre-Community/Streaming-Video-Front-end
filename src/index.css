@@ -1,13 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
+.darkMode {
+    --bg-main: #000000;
+    --brand-primary: #dc2626;
+    --bg-surface: transparent;
+    --border-main: #2a2729;
+    --text-title: var(--color-brand-primary);
+    --text-subtitle: #ffffff;
+    --text-body: #d2d2e0;
+    --text-icon-svg: var(--color-brand-primary)
+}
+
 @theme {
+    --color-title: var(--text-title);
+    --color-body: var(--text-body);
+    --color-subtitle: var(--text-subtitle);
+    --color-main: var(--bg-main);
+    --color-brand-primary: var(--brand-primary);
+    --color-border-main: var(--border-main);
+    --color-surface: var(--bg-surface);
+    --color-icon-svg: var(--text-icon-svg);
     --font-sans: sans-serif;
+    
     --font-roboto: "Roboto", sans-serif;
 }
 
 @layer base {
     html {
+        background-color: var(--bg-main);
         font-family: var(--font-roboto);
     }
 }
