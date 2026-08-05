@@ -15,9 +15,9 @@ export const UIbutton = ({
   const base =
     "px-4 py-2 font-semibold flex items-center justify-center gap-2 transition-all";
   const variants = {
-    primary: "bg-brand-primary hover:opacity-70 text-subtitle",
+    primary: "bg-brand-primary hover:opacity-70 text-white",
     secondary:
-      "bg-surface hover:bg-white/10 border border-border-main text-subtitle backdrop-blur",
+      "bg-surface hover:opacity-80 border border-border-main text-white backdrop-blur",
   };
   return (
     <button

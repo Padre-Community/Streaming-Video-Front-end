@@ -11,16 +11,16 @@ export const Banner = () => {
         alt={featuredBanner.title}
         className="w-full h-full object-cover object-top"
       />
-      <div className="absolute bottom-0 left-0 right-0 h-50 bg-gradient-to-t from-black/90 to-tranparent pointer-events-none"></div>
-      <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-gradient-to-r from-black via-black/60 to-transparent text-title">
+      <div className="absolute bottom-0 left-0 right-0 h-50 bg-banner-overlay-bottom pointer-events-none"></div>
+      <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-banner-overlay-left text-title">
         <div className="flex items-center gap-2">
           {featuredBanner.isInDestaque && (
-            <span className="inline-flex gap-1.5 px-2 py-0.5 text-[9px] font-black uppercase tracking-widest text-subtitle bg-brand-primary rounded mb-2">
+            <span className="inline-flex gap-1.5 px-2 py-0.5 text-[9px] font-black uppercase tracking-widest text-white bg-brand-primary rounded mb-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-3.5 h-3.5 text-subtitle"
+                className="w-3.5 h-3.5 text-white"
               >
                 <path
                   fillRule="evenodd"
@@ -38,7 +38,7 @@ export const Banner = () => {
         <h1 className="text-4xl font-bold text-title mb-3">
           {featuredBanner.title}
         </h1>
-        <p className="max-w-xl text-body line-clamp-3 leading-relaxed mb-3">
+        <p className="max-w-xl text-subtitle line-clamp-3 leading-relaxed mb-3">
           {featuredBanner.description}
         </p>
 

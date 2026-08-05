@@ -8,8 +8,31 @@
     --border-main: #2a2729;
     --text-title: var(--brand-primary);
     --text-subtitle: #ffffff;
-    --text-body: #d2d2e0;
     --text-icon-svg: var(--brand-primary);
+    --banner-overlay-left: linear-gradient(100deg, 
+    rgba(0, 0, 0, 0.95) 15%, 
+    rgba(0, 0, 0, 0.85) 35%, 
+    rgba(0, 0, 0, 0.4) 80%, 
+    transparent 100%
+    );
+    --banner-overlay-bottom: linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 100%)
+
+}
+.light {
+    --bg-main: #ffffff;
+    --brand-primary: #dc2626;
+    --bg-surface: var(--brand-primary);
+    --hover-button-secondary: opacity-90;
+    --border-main: #e5e7eb;
+    --text-title: var(--brand-primary);
+    --text-subtitle: #000000;
+    --text-icon-svg: var(--bg-main);
+    --banner-overlay-left: linear-gradient(100deg, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(255, 255, 255, 0.85) 35%, 
+    rgba(255, 255, 255, 0.4) 45%, 
+    transparent 100%);
+    --banner-overlay-bottom: linear-gradient(to top, rgba(255,255,255,0.95) 0%, transparent 100%);
 }
 
 @theme {
@@ -21,6 +44,9 @@
     --color-border-main: var(--border-main);
     --color-surface: var(--bg-surface);
     --color-icon-svg: var(--text-icon-svg);
+    --hover-button-secondary: var(--hover-button-secondary);
+    --background-image-banner-overlay-left: var(--banner-overlay-left);
+    --background-image-banner-overlay-bottom: var(--banner-overlay-bottom);
     --font-sans: sans-serif;
     
     --font-roboto: "Roboto", sans-serif;
