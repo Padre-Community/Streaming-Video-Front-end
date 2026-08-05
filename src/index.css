@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
-.darkMode {
+:root {
     --bg-main: #000000;
     --brand-primary: #dc2626;
     --bg-surface: transparent;
     --border-main: #2a2729;
-    --text-title: var(--color-brand-primary);
+    --text-title: var(--brand-primary);
     --text-subtitle: #ffffff;
     --text-body: #d2d2e0;
-    --text-icon-svg: var(--color-brand-primary)
+    --text-icon-svg: var(--brand-primary);
 }
 
 @theme {
