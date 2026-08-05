@@ -9,28 +9,28 @@
     --text-title: var(--brand-primary);
     --text-subtitle: #ffffff;
     --text-icon-svg: var(--brand-primary);
-    --banner-overlay-left: linear-gradient(100deg, 
-    rgba(0, 0, 0, 0.95) 15%, 
+    --banner-overlay-left: linear-gradient(60deg, 
+    rgba(0, 0, 0, 1) 25%, 
     rgba(0, 0, 0, 0.85) 35%, 
-    rgba(0, 0, 0, 0.4) 80%, 
+    rgba(0, 0, 0, 0.2) 60%, 
     transparent 100%
     );
-    --banner-overlay-bottom: linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 100%)
+    --banner-overlay-bottom: linear-gradient(to top, rgba(0,0,0,0.95) 5%, transparent 100%)
 
 }
 .light {
-    --bg-main: #ffffff;
+    --bg-main: #EFEFEF;
     --brand-primary: #dc2626;
     --bg-surface: var(--brand-primary);
     --hover-button-secondary: opacity-90;
-    --border-main: #e5e7eb;
+    --border-main: #FDFBF7;
     --text-title: var(--brand-primary);
     --text-subtitle: #000000;
     --text-icon-svg: var(--bg-main);
-    --banner-overlay-left: linear-gradient(100deg, 
-    rgba(255, 255, 255, 1) 0%, 
+    --banner-overlay-left: linear-gradient(60deg, 
+    rgba(255, 255, 255, 1) 25%, 
     rgba(255, 255, 255, 0.85) 35%, 
-    rgba(255, 255, 255, 0.4) 45%, 
+    rgba(255, 255, 255, 0.1) 60%, 
     transparent 100%);
     --banner-overlay-bottom: linear-gradient(to top, rgba(255,255,255,0.95) 0%, transparent 100%);
 }
