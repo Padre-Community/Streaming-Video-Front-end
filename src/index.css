@@ -15,7 +15,8 @@
     rgba(0, 0, 0, 0.2) 60%, 
     transparent 100%
     );
-    --banner-overlay-bottom: linear-gradient(to top, rgba(0,0,0,0.95) 5%, transparent 100%)
+    --banner-overlay-bottom: linear-gradient(to top, rgba(0,0,0,0.95) 5%, transparent 100%);
+    --url-logo: url('src/assets/Logo_StreamX_Dark.png');
 
 }
 .light {
@@ -33,6 +34,7 @@
     rgba(255, 255, 255, 0.1) 60%, 
     transparent 100%);
     --banner-overlay-bottom: linear-gradient(to top, rgba(255,255,255,0.95) 0%, transparent 100%);
+    --url-logo: url('src/assets/Logo_StreamX_Light.png');
 }
 
 @theme {
