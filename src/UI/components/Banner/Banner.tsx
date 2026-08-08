@@ -11,7 +11,7 @@ export const Banner = () => {
         alt={featuredBanner.title}
         className="w-full h-full object-cover object-top"
       />
-      <div className="absolute bottom-0 left-0 right-0 h-50 bg-gradient-to-t from-black/90 to-tranparent pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-50 bg-gradient-to from-black/90 to-tranparent pointer-events-none"></div>
       <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-gradient-to-r from-black via-black/60 to-transparent text-white">
         <div className="flex items-center gap-2">
           {featuredBanner.isInDestaque && (
