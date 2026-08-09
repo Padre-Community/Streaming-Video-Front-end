@@ -18,6 +18,10 @@ export const UIbutton = ({
     primary: "bg-red-600 hover:bg-red-700 text-white",
     secondary: "bg-gray-500/40 hover:bg-gray-500/30 text-white backdrop-blur",
     third: "bg-black text-white hover:cursor-pointer",
+
+    primary: "bg-brand-primary hover:opacity-70 text-white",
+    secondary:
+      "bg-surface hover:opacity-80 border border-border-main text-white backdrop-blur",
   };
   return (
     <button

@@ -1,21 +1,22 @@
 import { bannerMock } from "./mocks/bannerMock";
 import { UIbutton } from "../Button/Button";
+import { useEffect } from "react";
 
 export const Banner = () => {
   const featuredBanner =
     bannerMock.find((item) => item.isInDestaque) || bannerMock[0];
   return (
-    <section className="relative w-[80%] mx-auto h-145 rounded-3xl overflow-hidden">
+    <section className="relative w-[80%] mx-auto h-145 border border-border-main rounded-3xl overflow-hidden">
       <img
         src={featuredBanner.thumbnail_Url}
         alt={featuredBanner.title}
         className="w-full h-full object-cover object-top"
       />
-      <div className="absolute bottom-0 left-0 right-0 h-50 bg-gradient-to-t from-black/90 to-tranparent pointer-events-none"></div>
-      <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-gradient-to-r from-black via-black/60 to-transparent text-white">
+      <div className="absolute bottom-0 left-0 right-0 h-50 bg-banner-overlay-bottom pointer-events-none"></div>
+      <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-banner-overlay-left text-title">
         <div className="flex items-center gap-2">
           {featuredBanner.isInDestaque && (
-            <span className="inline-flex gap-1.5 px-2 py-0.5 text-[9px] font-black uppercase tracking-widest text-white bg-red-600 rounded mb-2">
+            <span className="inline-flex gap-1.5 px-2 py-0.5 text-[9px] font-black uppercase tracking-widest text-white bg-brand-primary rounded mb-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -31,14 +32,14 @@ export const Banner = () => {
               <span>Destaque hoje</span>
             </span>
           )}
-          <span className="inline-block px-2.5 text-xs font-bold  tracking-wider text-white-400 rounded-md mb-2">
+          <span className="inline-block px-2.5 text-xs font-bold  tracking-wider text-subtitle rounded-md mb-2">
             {featuredBanner.category}
           </span>
         </div>
-        <h1 className="text-4xl font-bold text-red-600 mb-3">
+        <h1 className="text-4xl font-bold text-title mb-3">
           {featuredBanner.title}
         </h1>
-        <p className="max-w-xl text-gray-300 line-clamp-3 max-w-xl leading-relaxed mb-3">
+        <p className="max-w-xl text-subtitle line-clamp-3 leading-relaxed mb-3">
           {featuredBanner.description}
         </p>
 
@@ -61,17 +62,14 @@ export const Banner = () => {
             </span>
           </UIbutton>
 
-          <UIbutton
-            variant="secondary"
-            className="bg-transparent border border-zinc-800 rounded-full cursor-pointer"
-          >
+          <UIbutton variant="secondary" className="rounded-full cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
-              className="w-4 h-4 text-red-600"
+              className="w-4 h-4 text-icon-svg"
             >
               <path
                 strokeLinecap="round"

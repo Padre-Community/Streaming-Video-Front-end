@@ -1,13 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
+:root {
+    --bg-main: #000000;
+    --brand-primary: #dc2626;
+    --bg-surface: transparent;
+    --border-main: #2a2729;
+    --text-title: var(--brand-primary);
+    --text-subtitle: #ffffff;
+    --text-icon-svg: var(--brand-primary);
+    --banner-overlay-left: linear-gradient(60deg, 
+    rgba(0, 0, 0, 1) 25%, 
+    rgba(0, 0, 0, 0.85) 35%, 
+    rgba(0, 0, 0, 0.2) 60%, 
+    transparent 100%
+    );
+    --banner-overlay-bottom: linear-gradient(to top, rgba(0,0,0,0.95) 5%, transparent 100%);
+    --url-logo: url('src/assets/Logo_StreamX_Dark.png');
+
+}
+.light {
+    --bg-main: #EFEFEF;
+    --brand-primary: #dc2626;
+    --bg-surface: var(--brand-primary);
+    --hover-button-secondary: opacity-90;
+    --border-main: #FDFBF7;
+    --text-title: var(--brand-primary);
+    --text-subtitle: #000000;
+    --text-icon-svg: var(--bg-main);
+    --banner-overlay-left: linear-gradient(60deg, 
+    rgba(255, 255, 255, 1) 25%, 
+    rgba(255, 255, 255, 0.85) 35%, 
+    rgba(255, 255, 255, 0.1) 60%, 
+    transparent 100%);
+    --banner-overlay-bottom: linear-gradient(to top, rgba(255,255,255,0.95) 0%, transparent 100%);
+    --url-logo: url('src/assets/Logo_StreamX_Light.png');
+}
+
 @theme {
+    --color-title: var(--text-title);
+    --color-body: var(--text-body);
+    --color-subtitle: var(--text-subtitle);
+    --color-main: var(--bg-main);
+    --color-brand-primary: var(--brand-primary);
+    --color-border-main: var(--border-main);
+    --color-surface: var(--bg-surface);
+    --color-icon-svg: var(--text-icon-svg);
+    --hover-button-secondary: var(--hover-button-secondary);
+    --background-image-banner-overlay-left: var(--banner-overlay-left);
+    --background-image-banner-overlay-bottom: var(--banner-overlay-bottom);
     --font-sans: sans-serif;
+    
     --font-roboto: "Roboto", sans-serif;
 }
 
 @layer base {
     html {
+        background-color: var(--bg-main);
         font-family: var(--font-roboto);
     }
 }
