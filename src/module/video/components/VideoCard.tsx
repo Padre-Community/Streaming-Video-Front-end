@@ -1,22 +1,13 @@
 import type { Video } from "../models/video";
 import { Eye, ThumbsUp, Calendar } from "lucide-react";
+import { formatDate } from "../utils/formatDate";
 export interface VideoCardProps {
   video: Video;
 }
 
-function formatDate(date: string) {
-  return new Intl.DateTimeFormat("pt-BR", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  })
-    .format(new Date(date))
-    .replace(".", "");
-}
-
 export default function VideoCard({ video }: VideoCardProps) {
   return (
-    <article className="w-72 overflow-hidden rounded-md bg-zinc-900">
+    <article className="w-72 overflow-hidden rounded-md bg-zinc-800">
       <div className="relative">
         <span className="absolute top-3 left-3 rounded-md bg-zinc-800 px-3 py-1.5 text-sm text-red-600">
           {video.category_name}

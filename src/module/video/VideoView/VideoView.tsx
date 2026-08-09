@@ -3,7 +3,8 @@ import videos from "../models/mocks/video-mock";
 
 export default function VideoView() {
   return (
-    <div className="grid grid-cols-4 gap-6">
+    <div className="gap-4 flex flex-wrap justify-center mt-10 p-20">
+
       {videos.map((video) => (
         <VideoCard key={video.id} video={video} />
       ))}

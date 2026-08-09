@@ -446,7 +446,7 @@ const videos: Video[] = [
     record_code: "VIDEO-020",
     shipping_date: "2026-07-20T10:00:00",
     title: "Praia ao Amanhecer",
-    url: "https://www.w3schoolsgit .com/html/movie.mp4",
+    url: "https://www.w3schools.com/html/movie.mp4",
     duration: "30:00",
     category_id: 5,
     category_name: "Relax",
