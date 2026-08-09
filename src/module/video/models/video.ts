@@ -1,4 +1,3 @@
-
 export interface Video {
   id: number;
   channel: string;
@@ -8,7 +7,9 @@ export interface Video {
   shipping_date: string;
   title: string;
   url: string;
+  duration: string;
   category_id: number;
+  category_name: string;
   playlist_id: number;
   users_id: number;
   channel_name: string;
@@ -20,4 +21,3 @@ export interface Video {
   view_count: number;
   channel_id: number;
 }
-
