@@ -1,27 +1,28 @@
+import { useTheme } from "../../../hooks/useTheme";
 import { bannerMock } from "./mocks/bannerMock";
 import { UIbutton } from "../Button/Button";
-import { useEffect } from "react";
 
 export const Banner = () => {
+  const { toggleTheme } = useTheme();
   const featuredBanner =
     bannerMock.find((item) => item.isInDestaque) || bannerMock[0];
   return (
-    <section className="relative w-[80%] mx-auto h-145 border border-border-main rounded-3xl overflow-hidden">
+    <section className="relative w-[80%] mx-auto h-145 border border-border rounded-2xl overflow-hidden">
       <img
         src={featuredBanner.thumbnail_Url}
         alt={featuredBanner.title}
         className="w-full h-full object-cover object-top"
       />
       <div className="absolute bottom-0 left-0 right-0 h-50 bg-banner-overlay-bottom pointer-events-none"></div>
-      <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-banner-overlay-left text-title">
-        <div className="flex items-center gap-2">
+      <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 bg-banner-overlay-left">
+        <div className="flex items-center gap-1.5">
           {featuredBanner.isInDestaque && (
-            <span className="inline-flex gap-1.5 px-2 py-0.5 text-[9px] font-black uppercase tracking-widest text-white bg-brand-primary rounded mb-2">
+            <span className="inline-flex gap-1 px-1.5 py-0.5 bg-brand mb-2 rounded">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-3.5 h-3.5 text-white"
+                className="w-3.5 h-3.5 text-text-on-brand"
               >
                 <path
                   fillRule="evenodd"
@@ -29,22 +30,28 @@ export const Banner = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>Destaque hoje</span>
+              <span className="font-body font-bold uppercase tracking-wide text-[10px] text-text-on-brand">
+                Destaque hoje
+              </span>
             </span>
           )}
-          <span className="inline-block px-2.5 text-xs font-bold  tracking-wider text-subtitle rounded-md mb-2">
+          <span className="inline-block px-2.5 text-xs font-bold  tracking-wider rounded-md mb-2">
             {featuredBanner.category}
           </span>
         </div>
-        <h1 className="text-4xl font-bold text-title mb-3">
+        <h1 className="font-heading text-4xl font-extrabold text-brand mb-3">
           {featuredBanner.title}
         </h1>
-        <p className="max-w-xl text-subtitle line-clamp-3 leading-relaxed mb-3">
+        <p className="max-w-xl font-body font-medium text-ms text-text-secondary line-clamp-3 leading-relaxed mb-3">
           {featuredBanner.description}
         </p>
 
         <div className="flex items-center gap-4 mt-5 my-5">
-          <UIbutton variant="primary" className="rounded-full cursor-pointer">
+          <UIbutton
+            variant="primary"
+            className="rounded-4xl"
+            onClick={toggleTheme}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -57,19 +64,19 @@ export const Banner = () => {
                 clipRule="evenodd"
               />
             </svg>
-            <span className="uppercase text-xs font-medium rounded mt-1 mb-1">
+            <span className="font-body uppercase text-xs font-semiBold">
               Assistir Agora
             </span>
           </UIbutton>
 
-          <UIbutton variant="secondary" className="rounded-full cursor-pointer">
+          <UIbutton variant="secondary" className="rounded-4xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
-              className="w-4 h-4 text-icon-svg"
+              className="w-4 h-4 text-brand"
             >
               <path
                 strokeLinecap="round"
@@ -77,7 +84,9 @@ export const Banner = () => {
                 d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
               />
             </svg>
-            <span>Compartilhar</span>
+            <span className="font-body font-semibold text-sm">
+              Compartilhar
+            </span>
           </UIbutton>
         </div>
       </div>

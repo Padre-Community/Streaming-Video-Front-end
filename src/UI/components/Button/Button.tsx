@@ -13,15 +13,12 @@ export const UIbutton = ({
   onClick,
 }: ButtonProps) => {
   const base =
-    "px-4 py-2 font-semibold flex items-center justify-center gap-2 transition-all";
+    "px-4 py-2 font-body font-semibold flex items-center justify-center gap-2 transition-all";
   const variants = {
-    primary: "bg-red-600 hover:bg-red-700 text-white",
-    secondary: "bg-gray-500/40 hover:bg-gray-500/30 text-white backdrop-blur",
-    third: "bg-black text-white hover:cursor-pointer",
-
-    primary: "bg-brand-primary hover:opacity-70 text-white",
+    primary: "bg-brand hover:bg-brand-hover text-text-on-brand cursor-pointer",
     secondary:
-      "bg-surface hover:opacity-80 border border-border-main text-white backdrop-blur",
+      "bg-surface hover:opacity-80 border border-border backdrop-blur cursor-pointer",
+    third: "bg-background hover:opacity-80 cursor-pointer",
   };
   return (
     <button
