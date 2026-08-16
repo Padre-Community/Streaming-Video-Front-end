@@ -7,7 +7,7 @@ export interface VideoCardProps {
 
 export default function VideoCard({ video }: VideoCardProps) {
   return (
-    <article className="w-72 overflow-hidden rounded-md bg-zinc-800">
+    <article className="w-full overflow-hidden rounded-md bg-zinc-800">
       <div className="relative">
         <span className="absolute top-3 left-3 rounded-md bg-zinc-800 px-3 py-1.5 text-sm text-red-600">
           {video.category_name}
