@@ -1,7 +1,5 @@
 import { bannerMock } from "./mocks/bannerMock";
 import { UIbutton } from "../Button/Button";
-import { useEffect } from "react";
-
 export const Banner = () => {
   const featuredBanner =
     bannerMock.find((item) => item.isInDestaque) || bannerMock[0];

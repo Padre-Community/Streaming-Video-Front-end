@@ -37,7 +37,7 @@
     --url-logo: url('src/assets/Logo_StreamX_Light.png');
 }
 
-@theme {
+ @theme{
     --color-title: var(--text-title);
     --color-body: var(--text-body);
     --color-subtitle: var(--text-subtitle);
