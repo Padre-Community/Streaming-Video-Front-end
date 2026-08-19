@@ -4,7 +4,7 @@ interface InputProp extends InputHTMLAttributes<HTMLInputElement> {
   labelIcon?: ReactNode;
 }
 
-export const input = ({
+export const Input = ({
   labelText,
   labelIcon,
   id,
