@@ -1,29 +1,29 @@
-interface InputProp {
-  type: string;
-  placeholder: string;
-  label: string;
-  labelText: string;
-  labelIcon?: React.ReactNode;
+import type { InputHTMLAttributes, ReactNode } from "react";
+interface InputProp extends InputHTMLAttributes<HTMLInputElement> {
+  labelText?: string;
+  labelIcon?: ReactNode;
 }
 
-export function Input({
-  type,
-  placeholder,
-  label,
+export const input = ({
   labelText,
   labelIcon,
-}: InputProp) {
+  id,
+  className,
+  ...rest
+}: InputProp) => {
   return (
-    <>
-      <label htmlFor={label} className="flex gap-2 text-zinc-300">
-        {labelIcon} {labelText}
-      </label>
+    <div className="flex flex-col gap-1 w-full">
+      {labelText && (
+        <label htmlFor={id} className="flex items-center gap-2 text-zinc-300">
+          {labelIcon} {labelText}
+        </label>
+      )}
+      ;
       <input
-        type={type}
-        placeholder={placeholder}
-        className="bg-zinc-800 p-2 w-full text-zinc-100 rounded-[0.4rem]"
-        id={label}
+        id={id}
+        className={`bg-zinc-800 p-2 w-full text-zinc-100 rounded-[0.4rem] ${className || ""}`}
+        {...rest}
       />
-    </>
+    </div>
   );
-}
+};
