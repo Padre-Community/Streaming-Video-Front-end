@@ -36,11 +36,7 @@ export const Navbar = () => {
           >
             {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
           </button>
-          <UIbutton
-            variant="primary"
-            className="rounded-4xl"
-            onClick={toggleTheme}
-          >
+          <UIbutton variant="primary" className="rounded-4xl">
             <span className="inline-flex text-text-on-brand text-sm pl-2 pr-2">
               <Upload size={16} className="mr-2 mt-0.5" />
               Publicar
