@@ -14,11 +14,12 @@ export const SearchBar = ({ onSearch }: SearchBarProps) => {
   };
   return (
     <form onSubmit={handleSubmit} className="relative w-full max-w-md">
-      <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2" />;
+      <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2" />
       <Input
-        className="pl-10 rounded-full border-border text-text-secondary"
+        className="focus:outline-none border pl-10 rounded-full border-border text-sm font-medium cursor-pointer"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        placeholder="Pequeisar vídeos, criadores, canais..."
       />
     </form>
   );
