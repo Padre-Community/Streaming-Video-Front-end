@@ -47,7 +47,7 @@ export const Navbar = () => {
               <span className="text-sm font-semibold text-text-primary">
                 Loid Padre
               </span>
-              <span className="text-xs font-semibold text-red-500">
+              <span className="text-xs font-medium text-red-500">
                 MEU CANAL
               </span>
             </div>
