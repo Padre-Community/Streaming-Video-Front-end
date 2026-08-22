@@ -1,9 +1,7 @@
-import { useTheme } from "../../../hooks/useTheme";
 import { bannerMock } from "./mocks/bannerMock";
 import { UIbutton } from "../Button/Button";
 
 export const Banner = () => {
-  const { toggleTheme } = useTheme();
   const featuredBanner =
     bannerMock.find((item) => item.isInDestaque) || bannerMock[0];
   return (
@@ -47,11 +45,7 @@ export const Banner = () => {
         </p>
 
         <div className="flex items-center gap-4 mt-5 my-5">
-          <UIbutton
-            variant="primary"
-            className="rounded-4xl"
-            onClick={toggleTheme}
-          >
+          <UIbutton variant="primary" className="rounded-4xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
