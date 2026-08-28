@@ -6,7 +6,11 @@ import { SearchBar } from "./SearchBar";
 import { UIbutton } from "../Button/Button";
 import { useTheme } from "../../../hooks/useTheme";
 
-export const Navbar = () => {
+interface NavbarProps {
+  onOpenUpload: () => void;
+}
+
+export const Navbar = ({ onOpenUpload }: NavbarProps) => {
   const { theme, toggleTheme } = useTheme();
   const handleSearch = (query: string) => {
     void query;
@@ -31,12 +35,16 @@ export const Navbar = () => {
         <div className="flex items-center gap-4">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-brand-hover transition-colors"
+            className="ml-2.5 p-2 rounded-full hover:bg-brand-hover transition-colors"
             aria-label="Alternar tema"
           >
             {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
           </button>
-          <UIbutton variant="primary" className="rounded-4xl">
+          <UIbutton
+            variant="primary"
+            className="rounded-4xl"
+            onClick={onOpenUpload}
+          >
             <span className="inline-flex text-text-on-brand text-sm pl-2 pr-2">
               <Upload size={16} className="mr-2 mt-0.5" />
               Publicar
