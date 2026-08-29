@@ -5,7 +5,7 @@ export const Banner = () => {
   const featuredBanner =
     bannerMock.find((item) => item.isInDestaque) || bannerMock[0];
   return (
-    <section className="relative w-[80%] mx-auto h-145 border border-border rounded-2xl overflow-hidden">
+    <section className="relative max-w-7xl mx-auto h-145 mb-10 border border-border rounded-2xl overflow-hidden">
       <img
         src={featuredBanner.thumbnail_Url}
         alt={featuredBanner.title}
