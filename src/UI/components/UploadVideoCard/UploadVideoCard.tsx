@@ -2,6 +2,24 @@ import { Clapperboard, X, UploadCloud, Link as LinkIcon } from "lucide-react";
 import { UIbutton } from "../Button/Button";
 import { Input } from "../Input/Input";
 import { STOCK_LOOPS } from "./mocks/uploadVideoMock";
+import videos from "../../../module/video/models/mocks/video-mock";
+
+type categoria = {
+  category_id: number;
+  category_name: string;
+};
+const categorias = videos.reduce<categoria[]>((acumulador, video) => {
+  const jaExiste = acumulador.some(
+    (categoria) => categoria.category_id === video.category_id,
+  );
+  if (!jaExiste) {
+    acumulador.push({
+      category_id: video.category_id,
+      category_name: video.category_name,
+    });
+  }
+  return acumulador;
+}, []);
 
 export default function UploadVideoCard({
   handleOpen,
@@ -127,9 +145,12 @@ export default function UploadVideoCard({
           </label>
           <select className="bg-background border border-border p-2.5 text-text-secondary text-xs rounded-lg focus:outline-none focus:border-brand transition-colors cursor-pointer">
             <option value="">Selecione uma categoria...</option>
-            <option value="gameplay">Gameplay</option>
-            <option value="tutorial">Tutorial</option>
-            <option value="musica">Música</option>
+            {categorias.map((categoria) => (
+              <option key={categoria.category_id} value={categoria.category_id}>
+                {categoria.category_name}
+              </option>
+            ))}
+            ;
           </select>
         </div>
       </div>
