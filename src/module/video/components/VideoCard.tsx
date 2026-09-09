@@ -10,7 +10,7 @@ export default function VideoCard({ video }: VideoCardProps) {
   return (
     <article className="w-full overflow-hidden rounded-xl bg-surface border border-border transition-colors duration-200">
       <div className="relative">
-        <span className="absolute top-3 left-3 rounded-md bg-brand/10 border border-brand/30 px-2.5 py-1 text-xs font-semibold text-brand backdrop-blur-sm">
+        <span className="absolute top-3 left-3 rounded-md bg-surface/35 border border-brand/40 px-2.5 py-1 text-xs font-semibold text-secondary backdrop-blur-sm">
           {video.category_name}
         </span>
 
