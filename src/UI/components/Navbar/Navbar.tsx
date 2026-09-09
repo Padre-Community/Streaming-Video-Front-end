@@ -17,7 +17,7 @@ export const Navbar = ({ onOpenUpload }: NavbarProps) => {
   };
 
   return (
-    <header className="w-full border-b border-border px-6 py-3 mb-6">
+    <header className="w-full border-b sticky top-0 z-100 border-border px-6 py-3 mb-6 backdrop-blur-lg">
       <nav className="flex items-center justify-between pl-3 pr-3">
         <div>
           <img
