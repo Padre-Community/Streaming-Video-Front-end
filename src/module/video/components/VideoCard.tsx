@@ -26,7 +26,7 @@ export default function VideoCard({ video }: VideoCardProps) {
       </div>
 
       <div className="flex h-44 flex-col p-4">
-        <h2 className="line-clamp-2 text-base font-semibold text-text-primary">
+        <h2 className="line-clamp-2 text-base font-semibold text-primary">
           {video.title}
         </h2>
 
@@ -38,12 +38,12 @@ export default function VideoCard({ video }: VideoCardProps) {
             alt={video.channel_name}
             className="w-6 h-6 rounded-full object-cover"
           />
-          <p className="text-text-secondary text-sm">{video.channel_name}</p>
+          <p className="text-secondary text-sm">{video.channel_name}</p>
         </div>
 
         <hr className="mt-auto border-border" />
 
-        <footer className="mt-3 flex items-center justify-between text-xs text-text-secondary">
+        <footer className="mt-3 flex items-center justify-between text-xs text-secondary">
           <div className="flex items-center gap-1">
             <Eye size={14} />
             <span>{formatCompactNumber(video.view_count)}</span>
