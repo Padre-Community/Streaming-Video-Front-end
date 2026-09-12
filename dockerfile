@@ -2,10 +2,14 @@ FROM node:24.14.0-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+RUN chown node:node /app
+
+USER node
+
+COPY --chown=node:node package*.json ./
 RUN npm ci
 
-COPY . .
+COPY --chown=node:node . .
 
 EXPOSE 3000
 
