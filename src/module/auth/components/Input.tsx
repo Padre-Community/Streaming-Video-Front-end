@@ -1,9 +1,12 @@
+import type { ReactNode } from "react";
+
 type InputProps = {
   id: string;
   placeholder?: string;
   type?: "text" | "email" | "password" | "number";
   required?: boolean;
   disabled?: boolean;
+  icon?: ReactNode;
 };
 export function Input({
   id,
@@ -11,16 +14,18 @@ export function Input({
   type = "text",
   required = false,
   disabled = false,
+  icon,
 }: InputProps) {
   return (
-    <div className=" flex flex-col gap-2 m-2">
+    <div className=" flex items-center px-[16px] gap-[10px] text-text-secondary">
+      {icon}
       <input
         id={id}
         type={type}
         placeholder={placeholder}
         required={required}
         disabled={disabled}
-        className="  p-3 rounded-xl bg-white hover:text-black hover:bg-gray-50  outline-1 outline-red-600 text-xl "
+        className="w-full h-[45px] text-text-secondary font-body font-medium text-sm"
       />
     </div>
   );
