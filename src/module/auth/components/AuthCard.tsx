@@ -2,8 +2,13 @@ import Input from "./Input";
 import Button from "./Button";
 import { Mail, Lock, LockKeyhole } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
+import { useState } from "react";
 
 export const AuthCard = () => {
+  const [authMode, setAuthMode] = useState<"login" | "register">("login");
+  const [transitionDirection, setTransitionDirection] = useState<
+    "to-login" | "to-register"
+  >("to-login");
   return (
     <div className="relative w-full max-w-[1040px] px-[56px] py-[48px] bg-surface rounded-2xl">
       <div className="flex justify-between">
@@ -72,7 +77,13 @@ export const AuthCard = () => {
                       className="bg-transparent px-[12px]"
                     />
                   </div>
-                  <p className="font-body font-semibold text-xs text-text-secondary cursor-pointer">
+                  <p
+                    onClick={() => {
+                      setAuthMode("register");
+                      setTransitionDirection("to-register");
+                    }}
+                    className="font-body font-semibold text-xs text-text-secondary cursor-pointer"
+                  >
                     Ainda não tem uma conta?
                     <span className="text-brand">Criar conta</span>
                   </p>
@@ -161,7 +172,13 @@ export const AuthCard = () => {
                         className="bg-transparent px-[12px]"
                       />
                     </div>
-                    <p className="font-body font-semibold text-xs text-text-secondary cursor-pointer">
+                    <p
+                      onClick={() => {
+                        setAuthMode("login");
+                        setTransitionDirection("to-login");
+                      }}
+                      className="font-body font-semibold text-xs text-text-secondary cursor-pointer"
+                    >
                       Já tem uma conta?
                       <span className="text-brand">Entrar</span>
                     </p>
@@ -179,27 +196,75 @@ export const AuthCard = () => {
         </div>
       </div>
       {/*slidingPainel*/}
-      <div className="flex flex-col justify-center absolute top-0 right-0 w-[560px] h-full bg-background border border-border">
-        <div className="flex flex-col gap-[24px] pl-[96px] pr-[64px] py-[64px]">
-          <div className="flex flex-col gap-[12px]">
-            <p className="font-body font-semibold text-xs text-text-secondary tracking-wider">
-              MAIS QUE VÍDEOS
-            </p>
-            <h1 className="font-heading font-bold text-3xl leading-[38px] text-text-primary">
-              Uma comunidade
-              <span className="block text-brand">em movimento</span>
-            </h1>
-            <span className="font-body font-regular text-sm text-text-secondary leading-[21px]">
-              Descubra novos criadores, explore conteúdos incríveis e
-              compartilhe o que você ama.
-            </span>
+      <div
+        className={`flex flex-col justify-center absolute top-0 left-0 transition-all duration-500 ease-in-out ${authMode === "login" ? "rounded-tl-[180px] rounded-bl-[180px] left-[calc(100%-560px)]" : "left-0 rounded-tr-[180px] rounded-br-[180px]"} w-[560px] h-full bg-background border border-border`}
+      >
+        <div className="grid relative">
+          {/* Login */}
+          <div
+            className={`col-start-1 row-start-1 flex flex-col gap-[24px] pl-[96px] pr-[64px] py-[64px] ${authMode === "login" ? "pointer-events-auto" : "pointer-events-none"}`}
+          >
+            <div
+              className={`transition-opacity duration-400 ease-in-out ${authMode === "login" ? "opacity-100" : "opacity-0"} ${transitionDirection === "to-login" ? "delay-[150ms]" : "delay-0"} flex flex-col gap-[12px]`}
+            >
+              <p className="font-body font-semibold text-xs text-text-secondary tracking-wider">
+                MAIS QUE VÍDEOS
+              </p>
+
+              <h1 className="font-heading font-bold text-3xl leading-[38px] text-text-primary">
+                Uma comunidade
+                <span className="block text-brand">em movimento</span>
+              </h1>
+
+              <span className="font-body font-regular text-sm text-text-secondary leading-[21px]">
+                Descubra novos criadores, explore conteúdos incríveis e
+                compartilhe o que você ama.
+              </span>
+              <div>
+                <Button
+                  type="button"
+                  text="Criar conta"
+                  className="bg-transparent border border-brand px-[20px]"
+                  onClick={() => {
+                    setAuthMode("register");
+                    setTransitionDirection("to-register");
+                  }}
+                />
+              </div>
+            </div>
           </div>
-          <div>
-            <Button
-              type="button"
-              text="Criar conta"
-              className="bg-transparent border border-brand px-[20px]"
-            />
+
+          {/* Register */}
+          <div
+            className={`col-start-1 row-start-1 flex flex-col gap-[24px] pl-[96px] pr-[64px] py-[64px] ${authMode === "login" ? "pointer-events-none" : "pointer-events-auto"}`}
+          >
+            <div
+              className={`transition-opacity duration-400 ease-in-out ${authMode === "login" ? "opacity-0" : "opacity-100"} ${transitionDirection === "to-register" ? "delay-[150ms]" : "delay-0"} flex flex-col gap-[12px]`}
+            >
+              <p className="font-body font-semibold text-xs text-text-secondary tracking-wider">
+                JÁ FAZ PARTE ?
+              </p>
+
+              <h1 className="font-heading font-bold text-3xl leading-[38px] text-text-primary">
+                Bem-vindo(a)
+                <span className="block text-brand">de volta!</span>
+              </h1>
+
+              <span className="font-body font-regular text-sm text-text-secondary leading-[21px]">
+                Já tem uma conta? Continue de onde parou.
+              </span>
+              <div>
+                <Button
+                  type="button"
+                  text="Entrar"
+                  className="bg-transparent border border-brand px-[20px]"
+                  onClick={() => {
+                    setAuthMode("login");
+                    setTransitionDirection("to-login");
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
