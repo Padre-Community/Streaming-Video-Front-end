@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ChangeEventHandler, ReactNode } from "react";
 
 type InputProps = {
   id: string;
@@ -8,6 +8,8 @@ type InputProps = {
   disabled?: boolean;
   icon?: ReactNode;
   autoFocus?: boolean;
+  value?: string | number | readonly string[];
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 };
 export function Input({
   id,
@@ -17,6 +19,8 @@ export function Input({
   disabled = false,
   icon,
   autoFocus,
+  onChange,
+  value,
 }: InputProps) {
   return (
     <div className=" flex items-center px-[16px] gap-[10px] text-text-secondary">
@@ -24,7 +28,9 @@ export function Input({
       <input
         id={id}
         type={type}
+        value={value}
         autoFocus={autoFocus}
+        onChange={onChange}
         placeholder={placeholder}
         required={required}
         disabled={disabled}
