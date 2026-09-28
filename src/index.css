@@ -39,6 +39,7 @@
   --ds-radius-md: 0.5rem;
   --ds-radius-lg: 0.75rem;
   --ds-radius-xl: 1rem;
+  --ds-radius-2xl:1.5rem;
   --ds-radius-full: 9999px;
 
   /* BANNER */
@@ -87,6 +88,7 @@
 
   --color-background: var(--ds-color-background);
   --color-surface: var(--ds-color-surface);
+  --color-surface-secondary: var(--ds-color-surface-secondary);
   --color-border: var(--ds-color-border);
 
   --color-brand: var(--ds-color-brand);
