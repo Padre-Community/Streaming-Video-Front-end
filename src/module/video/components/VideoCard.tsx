@@ -4,17 +4,53 @@ import { formatDate, formatCompactNumber } from "../utils/formatDate";
 
 export interface VideoCardProps {
   video: Video;
+  compact?: boolean;
 }
 
-export default function VideoCard({ video }: VideoCardProps) {
+export default function VideoCard({
+  video,
+  compact = false,
+}: VideoCardProps) {
+  // Versão compacta usada na tela de reprodução
+  if (compact) {
+    return (
+      <article className="flex w-full gap-3 rounded-xl border border-border bg-surface p-2">
+        <img
+          src={video.thumbnail_url}
+          alt={video.title}
+          className="h-20 w-28 shrink-0 rounded-lg object-cover"
+        />
+
+        <div className="min-w-0">
+          <h2 className="line-clamp-2 text-sm font-semibold text-text-primary">
+            {video.title}
+          </h2>
+
+          <p className="mt-1 text-xs text-text-secondary">
+            {video.channel_name}
+          </p>
+
+          <div className="mt-1 flex items-center gap-1 text-xs text-text-secondary">
+            <Eye size={12} />
+
+            <span>
+              {formatCompactNumber(video.view_count)} visualizações
+            </span>
+          </div>
+        </div>
+      </article>
+    );
+  }
+
+  // Versão normal usada na Home
   return (
-    <article className="w-full overflow-hidden rounded-xl bg-surface border border-border transition-colors duration-200">
+    <article className="w-full overflow-hidden rounded-xl border border-border bg-surface transition-colors duration-200">
       <div className="relative">
-        <span className="absolute top-3 left-3 rounded-md bg-surface/35 border border-brand/40 px-2.5 py-1 text-xs font-semibold text-secondary backdrop-blur-sm">
+        <span className="absolute left-3 top-3 rounded-md border border-brand/40 bg-surface/35 px-2.5 py-1 text-xs font-semibold text-secondary backdrop-blur-sm">
           {video.category_name}
         </span>
 
-        <span className="absolute right-3 bottom-3 rounded-md bg-black/70 px-2 py-0.5 text-xs text-white backdrop-blur-sm">
+        <span className="absolute bottom-3 right-3 rounded-md bg-black/70 px-2 py-0.5 text-xs text-white backdrop-blur-sm">
           {video.duration}
         </span>
 
@@ -30,15 +66,19 @@ export default function VideoCard({ video }: VideoCardProps) {
           {video.title}
         </h2>
 
-        <div className="flex items-center gap-2 mt-3">
+        <div className="mt-3 flex items-center gap-2">
           <img
             src={
-              video.avatar_url || "https://github.com/identicons/johndoe.png"
+              video.avatar_url ||
+              "https://github.com/identicons/johndoe.png"
             }
             alt={video.channel_name}
-            className="w-6 h-6 rounded-full object-cover"
+            className="h-6 w-6 rounded-full object-cover"
           />
-          <p className="text-text-secondary text-sm">{video.channel_name}</p>
+
+          <p className="text-sm text-text-secondary">
+            {video.channel_name}
+          </p>
         </div>
 
         <hr className="mt-auto border-border" />
