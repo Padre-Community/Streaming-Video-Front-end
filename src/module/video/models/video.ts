@@ -1,5 +1,5 @@
 export interface Video {
-  avatar_url: string;
+  avatar_ur?: string;
   id: number;
   channel: string;
   description: string;
