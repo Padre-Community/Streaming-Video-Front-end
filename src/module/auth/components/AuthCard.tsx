@@ -121,24 +121,24 @@ export const AuthCard = () => {
     }, 1000);
   };
   return (
-    <div className="relative w-full max-w-[1040px] px-[56px] py-[48px] bg-surface rounded-2xl">
+    <div className="relative w-full max-w-260 px-14 py-12 bg-surface rounded-2xl">
       <div className="flex justify-between">
         {/*LoginContent*/}
         {/*MainContent - separa Brand e Authbody*/}
-        <div className="flex flex-col gap-[32px]">
+        <div className="flex flex-col gap-8">
           <img
-            className="w-[171px] h-[36px]"
+            className="w-42.75 h-9"
             src="src/assets/Logo_StreamX_Dark.png"
             alt="Logo StreamX"
           />
-          <section className="flex w-[368px] flex-col gap-[24px]">
+          <section className="flex w-92 flex-col gap-6">
             {/*AuthIntro*/}
-            <div className="flex flex-col gap-[12px]">
-              <h1 className="font-heading font-bold text-3xl leading-[38px] text-text-on-brand tracking-widest">
+            <div className="flex flex-col gap-3">
+              <h1 className="font-heading font-bold text-3xl leading-9.6 text-text-on-brand tracking-widest">
                 Bem-vindo(a){" "}
                 <span className="block text-brand"> de volta!</span>
               </h1>
-              <p className="font-body font-regular text-sm text-text-secondary leading-[21px] line-clamp-3">
+              <p className="font-body font-regular text-sm text-text-secondary leading-5.25 line-clamp-3">
                 Entre para continuar assistindo, criar playlists, comentar e
                 fazer parte da nossa comunidade.
               </p>
@@ -146,11 +146,8 @@ export const AuthCard = () => {
             {/*AuthFlow*/}
             <div>
               {/*AuthActions - agrupa as ações de autenticação*/}
-              <div className="flex flex-col gap-[12px]">
-                <form
-                  onSubmit={handleLogin}
-                  className="flex flex-col gap-[12px]"
-                >
+              <div className="flex flex-col gap-3">
+                <form onSubmit={handleLogin} className="flex flex-col gap-3">
                   <div className="relative w-full bg-background rounded-md border border-border">
                     <Input
                       value={email}
@@ -202,13 +199,13 @@ export const AuthCard = () => {
                   <hr className="flex-1 border-0 border-t-2 border-border" />
                 </div>
                 {/*GoogleButton*/}
-                <div className="flex flex-col gap-[8px]">
-                  <div className="flex justify-center items-center bg-background px-[16px] rounded-md border border-border">
+                <div className="flex flex-col gap-2">
+                  <div className="flex justify-center items-center bg-background px-4 rounded-md border border-border">
                     <FcGoogle size={16} />
                     <Button
                       type="submit"
                       text="Continue com google"
-                      className="bg-transparent px-[12px]"
+                      className="bg-transparent px-3"
                     />
                   </div>
                   <p
@@ -225,7 +222,7 @@ export const AuthCard = () => {
               </div>
             </div>
           </section>
-          <footer className="flex w-[368px]">
+          <footer className="flex w-92">
             <p className="font-body font-semibold text-xs text-text-secondary leading-4 line-clamp-2">
               Ao continuar você concorda com nossos Termos de Uso e Política de
               Privacidade
@@ -236,20 +233,20 @@ export const AuthCard = () => {
         {/*RegisterContent*/}
         <div>
           {/*MainContent - separa Brand e Authbody*/}
-          <div className="flex flex-col gap-[32px]">
+          <div className="flex flex-col gap-8">
             <img
-              className="w-[171px] h-[36px]"
+              className="w-42.75 h-9"
               src="src/assets/Logo_StreamX_Dark.png"
               alt="Logo StreamX"
             />
-            <section className="flex w-[368px] flex-col gap-[24px]">
+            <section className="flex w-92 flex-col gap-6">
               {/*AuthIntro*/}
-              <div className="flex flex-col gap-[12px]">
-                <h1 className="font-heading font-bold text-3xl leading-[38px] text-text-on-brand tracking-widest">
+              <div className="flex flex-col gap-3">
+                <h1 className="font-heading font-bold text-3xl leading-9.5 text-text-on-brand tracking-widest">
                   Crie sua
                   <span className="block text-brand">conta</span>
                 </h1>
-                <p className="font-body font-regular text-sm text-text-secondary leading-[21px] line-clamp-3">
+                <p className="font-body font-regular text-sm text-text-secondary leading-5.25 line-clamp-3">
                   Entre para fazer parte da comunidade, descobrir novos
                   criadores e compartilhar o que você gosta.
                 </p>
@@ -257,10 +254,10 @@ export const AuthCard = () => {
               {/*AuthFlow*/}
               <div>
                 {/*AuthActions - agrupa as ações de autenticação*/}
-                <div className="flex flex-col gap-[12px]">
+                <div className="flex flex-col gap-3">
                   <form
                     onSubmit={handleRegister}
-                    className="flex flex-col gap-[12px]"
+                    className="flex flex-col gap-3"
                   >
                     <div className="relative w-full bg-background rounded-md border border-border">
                       <Input
@@ -276,7 +273,7 @@ export const AuthCard = () => {
                         autoFocus
                       />
                     </div>
-                    <fieldset className="flex flex-col gap-[12px]">
+                    <fieldset className="flex flex-col gap-3">
                       <div className="relative w-full bg-background rounded-md border border-border">
                         <Input
                           value={registerPassword}
@@ -329,13 +326,13 @@ export const AuthCard = () => {
                     <hr className="flex-1 border-0 border-t-2 border-border" />
                   </div>
                   {/*GoogleButton*/}
-                  <div className="flex flex-col gap-[8px]">
-                    <div className="flex justify-center items-center bg-background px-[16px] rounded-md border border-border">
+                  <div className="flex flex-col gap-2">
+                    <div className="flex justify-center items-center bg-background px-4 rounded-md border border-border">
                       <FcGoogle size={16} />
                       <Button
                         type="submit"
                         text="Criar conta com google"
-                        className="bg-transparent px-[12px]"
+                        className="bg-transparent px-3"
                       />
                     </div>
                     <p
@@ -352,7 +349,7 @@ export const AuthCard = () => {
                 </div>
               </div>
             </section>
-            <footer className="flex w-[368px]">
+            <footer className="flex w-92">
               <p className="font-body font-semibold text-xs text-text-secondary leading-4 line-clamp-2">
                 Ao continuar você concorda com nossos Termos de Uso e Política
                 de Privacidade
@@ -363,26 +360,26 @@ export const AuthCard = () => {
       </div>
       {/*slidingPainel*/}
       <div
-        className={`flex flex-col justify-center absolute top-0 left-0 transition-all duration-500 ease-in-out ${authMode === "login" ? "rounded-tl-[180px] rounded-bl-[180px] left-[calc(100%-560px)]" : "left-0 rounded-tr-[180px] rounded-br-[180px]"} w-[560px] h-full bg-background border border-border rounded-2xl`}
+        className={`flex flex-col justify-center absolute top-0 left-0 transition-all duration-500 ease-in-out ${authMode === "login" ? "rounded-tl-[180px] rounded-bl-[180px] left-[calc(100%-560px)]" : "left-0 rounded-tr-[180px] rounded-br-[180px]"} w-140 h-full bg-background border border-border rounded-2xl`}
       >
         <div className="grid relative">
           {/* Login */}
           <div
-            className={`col-start-1 row-start-1 flex flex-col gap-[24px] pl-[96px] pr-[64px] py-[64px] ${authMode === "login" ? "pointer-events-auto" : "pointer-events-none"}`}
+            className={`col-start-1 row-start-1 flex flex-col gap-6 pl-24 pr-16 py-16 ${authMode === "login" ? "pointer-events-auto" : "pointer-events-none"}`}
           >
             <div
-              className={`transition-opacity duration-400 ease-in-out ${authMode === "login" ? "opacity-100" : "opacity-0"} ${transitionDirection === "to-login" ? "delay-[150ms]" : "delay-0"} flex flex-col gap-[12px]`}
+              className={`transition-opacity duration-400 ease-in-out ${authMode === "login" ? "opacity-100" : "opacity-0"} ${transitionDirection === "to-login" ? "delay-150" : "delay-0"} flex flex-col gap-3`}
             >
               <p className="font-body font-semibold text-xs text-text-secondary tracking-wider">
                 MAIS QUE VÍDEOS
               </p>
 
-              <h1 className="font-heading font-bold text-3xl leading-[38px] text-text-primary">
+              <h1 className="font-heading font-bold text-3xl leading-9.5 text-text-primary">
                 Uma comunidade
                 <span className="block text-brand">em movimento</span>
               </h1>
 
-              <span className="font-body font-regular text-sm text-text-secondary leading-[21px]">
+              <span className="font-body font-regular text-sm text-text-secondary leading-5.25">
                 Descubra novos criadores, explore conteúdos incríveis e
                 compartilhe o que você ama.
               </span>
@@ -390,7 +387,7 @@ export const AuthCard = () => {
                 <Button
                   type="button"
                   text="Criar conta"
-                  className="bg-transparent border border-brand px-[20px]"
+                  className="bg-transparent border border-brand px-5"
                   onClick={() => {
                     setAuthMode("register");
                     setTransitionDirection("to-register");
@@ -402,28 +399,28 @@ export const AuthCard = () => {
 
           {/* Register */}
           <div
-            className={`col-start-1 row-start-1 flex flex-col gap-[24px] pl-[96px] pr-[64px] py-[64px] ${authMode === "login" ? "pointer-events-none" : "pointer-events-auto"}`}
+            className={`col-start-1 row-start-1 flex flex-col gap-6 pl-24 pr-16 py-16 ${authMode === "login" ? "pointer-events-none" : "pointer-events-auto"}`}
           >
             <div
-              className={`transition-opacity duration-400 ease-in-out ${authMode === "login" ? "opacity-0" : "opacity-100"} ${transitionDirection === "to-register" ? "delay-[150ms]" : "delay-0"} flex flex-col gap-[12px]`}
+              className={`transition-opacity duration-400 ease-in-out ${authMode === "login" ? "opacity-0" : "opacity-100"} ${transitionDirection === "to-register" ? "delay-150" : "delay-0"} flex flex-col gap-3`}
             >
               <p className="font-body font-semibold text-xs text-text-secondary tracking-wider">
                 JÁ FAZ PARTE ?
               </p>
 
-              <h1 className="font-heading font-bold text-3xl leading-[38px] text-text-primary">
+              <h1 className="font-heading font-bold text-3xl leading-9.5 text-text-primary">
                 Bem-vindo(a)
                 <span className="block text-brand">de volta!</span>
               </h1>
 
-              <span className="font-body font-regular text-sm text-text-secondary leading-[21px]">
+              <span className="font-body font-regular text-sm text-text-secondary leading-5.25">
                 Já tem uma conta? Continue de onde parou.
               </span>
               <div>
                 <Button
                   type="button"
                   text="Entrar"
-                  className="bg-transparent border border-brand px-[20px]"
+                  className="bg-transparent border border-brand px-6"
                   onClick={() => {
                     setAuthMode("login");
                     setTransitionDirection("to-login");
