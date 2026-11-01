@@ -1,7 +1,6 @@
 import Input from "./Input";
 import Button from "./Button";
-import { Mail, Lock, LockKeyhole } from "lucide-react";
-import { FcGoogle } from "react-icons/fc";
+import { Mail, Lock, LockKeyhole, Globe } from "lucide-react";
 import { useState } from "react";
 
 export const AuthCard = () => {

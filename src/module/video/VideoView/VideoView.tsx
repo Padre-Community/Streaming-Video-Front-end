@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import VideoCard from "../components/VideoCard";
 import videos from "../models/mocks/video-mock";
 import ThemeFilter from "../components/ThemeFilter/ThemeFilter";
@@ -15,18 +17,15 @@ export default function VideoView() {
       : videos.filter((video) => video.category_name === selectedCategory);
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-2">
-      <ThemeFilter
-        categories={uniqueCategories}
-        selectedCategory={selectedCategory}
-        onSelectCategory={setSelectedCategory}
-      />
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {filteredVideos.map((video) => (
-          <VideoCard key={video.id} video={video} />
-        ))}
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto px-2">
+      {videos.map((video) => (
+        <Link
+          key={video.id}
+          to={`/reproduction/${video.id}`}
+        >
+          <VideoCard video={video} />
+        </Link>
+      ))}
     </div>
   );
 }
