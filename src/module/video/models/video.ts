@@ -2,6 +2,7 @@ export interface Video {
   avatar_ur?: string;
   id: number;
   channel: string;
+  avatar_url: string;
   description: string;
   liked: boolean;
   record_code: string;
