@@ -3,6 +3,7 @@ import VideoCard from "../../module/video/components/VideoCard";
 import videos from "../../module/video/models/mocks/video-mock";
 import type { Video } from "../../module/video/models/video";
 import { useParams } from "react-router";
+import VideoInteractions from "../../module/video/components/VideoInteractions";
 
 function Reproduction() {
   const { id } = useParams();
@@ -44,6 +45,11 @@ function Reproduction() {
             <p className="mt-2 text-text-secondary">
               {videoSelecionado.description}
             </p>
+          </div>
+          <div className="">
+              <VideoInteractions
+              video={videoSelecionado}
+              />
           </div>
         </section>
 
