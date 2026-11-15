@@ -7,10 +7,7 @@ export interface VideoCardProps {
   compact?: boolean;
 }
 
-export default function VideoCard({
-  video,
-  compact = false,
-}: VideoCardProps) {
+export default function VideoCard({ video, compact = false }: VideoCardProps) {
   // Versão compacta usada na tela de reprodução
   if (compact) {
     return (
@@ -33,9 +30,7 @@ export default function VideoCard({
           <div className="mt-1 flex items-center gap-1 text-xs text-text-secondary">
             <Eye size={12} />
 
-            <span>
-              {formatCompactNumber(video.view_count)} visualizações
-            </span>
+            <span>{formatCompactNumber(video.view_count)} visualizações</span>
           </div>
         </div>
       </article>
@@ -69,16 +64,13 @@ export default function VideoCard({
         <div className="mt-3 flex items-center gap-2">
           <img
             src={
-              video.avatar_url ||
-              "https://github.com/identicons/johndoe.png"
+              video.avatar_url || "https://github.com/identicons/johndoe.png"
             }
             alt={video.channel_name}
             className="h-6 w-6 rounded-full object-cover"
           />
 
-          <p className="text-sm text-text-secondary">
-            {video.channel_name}
-          </p>
+          <p className="text-sm text-text-secondary">{video.channel_name}</p>
         </div>
 
         <hr className="mt-auto border-border" />

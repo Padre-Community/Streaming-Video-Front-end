@@ -9,9 +9,9 @@ function Reproduction() {
 
   const videoInicial =
     videos.find((video) => video.id === Number(id)) || videos[0];
-    
+
   const [videoSelecionado, setVideoSelecionado] = useState<Video>(videoInicial);
-  
+
   const videosRecomendados = videos
     .filter((video) => video.id !== videoSelecionado.id)
     .slice(0, 4);
@@ -19,7 +19,6 @@ function Reproduction() {
   return (
     <main className="p-4">
       <div className="flex flex-col gap-4 lg:flex-row">
-
         {/* Área de reprodução */}
         <section className="flex-1">
           <div className="aspect-video overflow-hidden rounded-xl bg-black">
@@ -65,7 +64,6 @@ function Reproduction() {
             ))}
           </div>
         </aside>
-
       </div>
     </main>
   );

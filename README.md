@@ -13,32 +13,45 @@
 
 ## 🚀 Sobre o Projeto
 
-Bem-vindo ao ecossistema de Front-end da **Loid Community**! Este é um ambiente de desenvolvimento colaborativo e focado em alta performance, construído inteiramente pela nossa comunidade.
+Bem-vindo ao ecossistema de Front-end da **Loid Community**! Este é um ambiente
+de desenvolvimento colaborativo e focado em alta performance, construído
+inteiramente pela nossa comunidade.
 
-A aplicação foi desenhada utilizando **React.js com Vite** para garantir builds instantâneos e uma experiência de desenvolvimento extremamente veloz, estruturada sob as regras rígidas do **TypeScript** e estilizada com a eficiência do **Tailwind CSS**.
+A aplicação foi desenhada utilizando **React.js com Vite** para garantir builds
+instantâneos e uma experiência de desenvolvimento extremamente veloz,
+estruturada sob as regras rígidas do **TypeScript** e estilizada com a
+eficiência do **Tailwind CSS**.
 
 ---
 
 ## 🏗️ 1. Arquitetura do Sistema: MVVM
 
-Para garantir que múltiplas squads consigam trabalhar no mesmo repositório sem gerar conflitos de código, adotamos o padrão arquitetural **MVVM (Model-View-ViewModel)**.
+Para garantir que múltiplas squads consigam trabalhar no mesmo repositório sem
+gerar conflitos de código, adotamos o padrão arquitetural **MVVM
+(Model-View-ViewModel)**.
 
 A divisão de responsabilidades é cirúrgica:
 
 ### 📺 View (A Interface)
 
 - **O que é:** Componentes visuais puros (`.tsx`).
-- **Regra:** **Zero lógica de negócios ou requisições de API.** A View apenas consome o estado exposto pela _ViewModel_ e renderiza os elementos na tela. Interações do usuário (como cliques) apenas disparam funções da _ViewModel_.
+- **Regra:** **Zero lógica de negócios ou requisições de API.** A View apenas
+  consome o estado exposto pela _ViewModel_ e renderiza os elementos na tela.
+  Interações do usuário (como cliques) apenas disparam funções da _ViewModel_.
 
 ### 🧠 ViewModel (O Estado e a Lógica)
 
 - **O que é:** Custom Hooks do React (`use[Funcionalidade]ViewModel.ts`).
-- **Regra:** É o cérebro da tela. Gerencia estados (`useState`), ciclos de vida (`useEffect`) e expõe apenas as variáveis e funções necessárias para a View. Ela consome a camada de _Model_ para tratar os dados.
+- **Regra:** É o cérebro da tela. Gerencia estados (`useState`), ciclos de vida
+  (`useEffect`) e expõe apenas as variáveis e funções necessárias para a View.
+  Ela consome a camada de _Model_ para tratar os dados.
 
 ### 🗄️ Model (Os Dados e Serviços)
 
-- **O que é:** Tipagens TypeScript (`interfaces`), mapeamento de dados (Mappers/Adapters) e contratos de API.
-- **Regra:** Lida diretamente com as regras de negócio cruas e com a comunicação direta com o nosso Back-end.
+- **O que é:** Tipagens TypeScript (`interfaces`), mapeamento de dados
+  (Mappers/Adapters) e contratos de API.
+- **Regra:** Lida diretamente com as regras de negócio cruas e com a comunicação
+  direta com o nosso Back-end.
 
 ---
 
@@ -99,8 +112,8 @@ npm install
 
 ```
 
-4. **Configure as Variáveis de Ambiente:**
-   Crie um arquivo `.env` na raiz do projeto e insira a URL do Back-end fornecida pelo seu Tech Lead:
+4. **Configure as Variáveis de Ambiente:** Crie um arquivo `.env` na raiz do
+   projeto e insira a URL do Back-end fornecida pelo seu Tech Lead:
 
 ```env
 VITE_API_URL=http://localhost:3000
@@ -114,23 +127,29 @@ npm run dev
 
 ```
 
-_Abra o navegador no endereço indicado pelo terminal (geralmente `http://localhost:5173`)._
+_Abra o navegador no endereço indicado pelo terminal (geralmente
+`http://localhost:5173`)._
 
 ---
 
 ## 🚦 4. Fluxo de Trabalho das Squads (Git Flow)
 
-Para manter a organização do Kanban e evitar quebras na ramificação principal, jogaremos sob estas regras:
+Para manter a organização do Kanban e evitar quebras na ramificação principal,
+jogaremos sob estas regras:
 
 - **`main`:** Código 100% estável. **Ninguém comita direto aqui.**
-- **`develop`:** Ambiente de integração das squads. Todas as features se encontram aqui.
-- **Branches de Task (`feature/` ou `fix/`):** Crie sempre a partir da `develop`.
+- **`develop`:** Ambiente de integração das squads. Todas as features se
+  encontram aqui.
+- **Branches de Task (`feature/` ou `fix/`):** Crie sempre a partir da
+  `develop`.
 - _Padrão de nomenclatura:_ `feature/nome-da-squad/titulo-da-task`
 - _Exemplo:_ `git checkout -b feature/akatsuki/input-senha`
 
 ### 🔄 Pull Requests e Code Review
 
-Ao finalizar a sua tarefa no seu ambiente local, envie a sua branch para o GitHub e abra um **Pull Request (PR)** apontando para a branch `develop`.
-A tarefa mudará automaticamente para a coluna **In Review** no Kanban, e o **Tech Lead** da sua Squad fará a revisão do código antes de realizar o merge.
+Ao finalizar a sua tarefa no seu ambiente local, envie a sua branch para o
+GitHub e abra um **Pull Request (PR)** apontando para a branch `develop`. A
+tarefa mudará automaticamente para a coluna **In Review** no Kanban, e o **Tech
+Lead** da sua Squad fará a revisão do código antes de realizar o merge.
 
 ---

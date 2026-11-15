@@ -13,10 +13,8 @@ export default function AppRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/username" element={<Username />} />
         <Route path="/dashboard/perfil" element={<Perfil />} />
-<Route
-  path="/reproduction/:id"
-  element={<Reproduction />}
-/>      </Routes>
+        <Route path="/reproduction/:id" element={<Reproduction />} />{" "}
+      </Routes>
     </BrowserRouter>
   );
 }

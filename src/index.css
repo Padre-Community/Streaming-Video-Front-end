@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -13,7 +13,7 @@
 
   --ds-color-background: #000000;
   --ds-color-surface: #121214;
-  --ds-color-surface-secondary: #09090B;
+  --ds-color-surface-secondary: #09090b;
   --ds-color-border: #2a2729;
 
   --ds-color-text-primary: #ffffff;
@@ -39,7 +39,7 @@
   --ds-radius-md: 0.5rem;
   --ds-radius-lg: 0.75rem;
   --ds-radius-xl: 1rem;
-  --ds-radius-2xl:1.5rem;
+  --ds-radius-2xl: 1.5rem;
   --ds-radius-full: 9999px;
 
   /* BANNER */
@@ -57,7 +57,7 @@
     rgba(0, 0, 0, 0.95) 5%,
     transparent 100%
   );
-};
+}
 
 .light {
   --ds-color-background: #efefef;
@@ -83,8 +83,7 @@
 }
 
 @theme {
-
-    /* CORES */
+  /* CORES */
 
   --color-background: var(--ds-color-background);
   --color-surface: var(--ds-color-surface);
@@ -112,7 +111,6 @@
   --text-3xl: var(--ds-font-size-3xl);
   --text-4xl: var(--ds-font-size-4xl);
 
-
   /* BORDER RADIUS */
 
   --radius-sm: var(--ds-radius-sm);
@@ -121,15 +119,12 @@
   --radius-xl: var(--ds-radius-xl);
   --radius-full: var(--ds-radius-full);
 
-
   /* BANNER */
 
-  --background-image-banner-overlay-left:
-    var(--ds-banner-overlay-left);
+  --background-image-banner-overlay-left: var(--ds-banner-overlay-left);
 
-  --background-image-banner-overlay-bottom:
-    var(--ds-banner-overlay-bottom);
-};
+  --background-image-banner-overlay-bottom: var(--ds-banner-overlay-bottom);
+}
 
 @layer base {
   html,
@@ -137,5 +132,5 @@
     background-color: var(--ds-color-background);
     color: var(--ds-color-text-primary);
     font-family: var(--ds-font-family-body);
-  };
-};
+  }
+}
