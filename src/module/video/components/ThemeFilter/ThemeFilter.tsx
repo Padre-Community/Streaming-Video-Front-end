@@ -4,7 +4,11 @@ interface ThemeFilterProps {
   onSelectCategory: (category: string) => void;
 }
 
-const ThemeFilter = ({ categories, selectedCategory, onSelectCategory }: ThemeFilterProps) => {
+const ThemeFilter = ({
+  categories,
+  selectedCategory,
+  onSelectCategory,
+}: ThemeFilterProps) => {
   return (
     <div className="flex flex-wrap gap-3 mb-6">
       {categories.map((category) => {

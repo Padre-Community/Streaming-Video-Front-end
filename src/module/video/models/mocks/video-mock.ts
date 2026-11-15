@@ -3,7 +3,7 @@ import type { Video } from "../video";
 const videos: Video[] = [
   {
     id: 1,
-    channel: "@mundoSelvagem",  
+    channel: "@mundoSelvagem",
     avatar_url: "https://github.com/identicons/johndoe.png",
     description: "Cenas de florestas, rios e animais ao amanhecer.",
     liked: false,
@@ -22,14 +22,15 @@ const videos: Video[] = [
     status: "ACTIVE",
     tags: "natureza,floresta,animais",
     thumbnail_url: "https://picsum.photos/640/360?random=1",
-    view_count: 6840,
+    view_count: 20840,
     channel_id: 101,
   },
   {
     id: 2,
     channel: "@naturezaViva",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Uma viagem pelas cachoeiras e montanhas mais impressionantes do planeta.",
+    description:
+      "Uma viagem pelas cachoeiras e montanhas mais impressionantes do planeta.",
     liked: true,
     record_code: "VIDEO-002",
     shipping_date: "2026-07-02T10:00:00",
@@ -77,7 +78,8 @@ const videos: Video[] = [
     id: 4,
     channel: "@ecoMundo",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Imagens aéreas revelam a diversidade e a beleza da Floresta Amazônica.",
+    description:
+      "Imagens aéreas revelam a diversidade e a beleza da Floresta Amazônica.",
     liked: true,
     record_code: "VIDEO-004",
     shipping_date: "2026-07-04T10:00:00",
@@ -101,7 +103,8 @@ const videos: Video[] = [
     id: 5,
     channel: "@neoTokyo",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Uma megacidade futurista movida por tecnologia, luzes e inteligência artificial.",
+    description:
+      "Uma megacidade futurista movida por tecnologia, luzes e inteligência artificial.",
     liked: false,
     record_code: "VIDEO-005",
     shipping_date: "2026-07-05T10:00:00",
@@ -125,7 +128,8 @@ const videos: Video[] = [
     id: 6,
     channel: "@universoSciFi",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Uma tripulação atravessa um portal em busca de um planeta habitável.",
+    description:
+      "Uma tripulação atravessa um portal em busca de um planeta habitável.",
     liked: true,
     record_code: "VIDEO-006",
     shipping_date: "2026-07-06T10:00:00",
@@ -149,7 +153,8 @@ const videos: Video[] = [
     id: 7,
     channel: "@androidLab",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Androides conscientes questionam os limites entre humanidade e tecnologia.",
+    description:
+      "Androides conscientes questionam os limites entre humanidade e tecnologia.",
     liked: false,
     record_code: "VIDEO-007",
     shipping_date: "2026-07-07T10:00:00",
@@ -173,7 +178,8 @@ const videos: Video[] = [
     id: 8,
     channel: "@linhaTemporal",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Uma experiência altera o tempo e coloca toda uma cidade em risco.",
+    description:
+      "Uma experiência altera o tempo e coloca toda uma cidade em risco.",
     liked: true,
     record_code: "VIDEO-008",
     shipping_date: "2026-07-08T10:00:00",
@@ -197,7 +203,8 @@ const videos: Video[] = [
     id: 9,
     channel: "@deepTech",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Entenda como os circuitos e os dados trabalham juntos em sistemas modernos.",
+    description:
+      "Entenda como os circuitos e os dados trabalham juntos em sistemas modernos.",
     liked: false,
     record_code: "VIDEO-009",
     shipping_date: "2026-07-09T10:00:00",
@@ -221,7 +228,8 @@ const videos: Video[] = [
     id: 10,
     channel: "@techInside",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Uma explicação visual de como processadores executam bilhões de operações.",
+    description:
+      "Uma explicação visual de como processadores executam bilhões de operações.",
     liked: true,
     record_code: "VIDEO-010",
     shipping_date: "2026-07-10T10:00:00",
@@ -245,7 +253,8 @@ const videos: Video[] = [
     id: 11,
     channel: "@iaHoje",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Conceitos fundamentais de inteligência artificial explicados de forma simples.",
+    description:
+      "Conceitos fundamentais de inteligência artificial explicados de forma simples.",
     liked: false,
     record_code: "VIDEO-011",
     shipping_date: "2026-07-11T10:00:00",
@@ -269,7 +278,8 @@ const videos: Video[] = [
     id: 12,
     channel: "@futuroConectado",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Casas, carros e cidades conectadas transformam a rotina das pessoas.",
+    description:
+      "Casas, carros e cidades conectadas transformam a rotina das pessoas.",
     liked: true,
     record_code: "VIDEO-012",
     shipping_date: "2026-07-12T10:00:00",
@@ -293,7 +303,8 @@ const videos: Video[] = [
     id: 13,
     channel: "@astroVlogs",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Uma exploração visual de nebulosas, estrelas e regiões distantes do universo.",
+    description:
+      "Uma exploração visual de nebulosas, estrelas e regiões distantes do universo.",
     liked: false,
     record_code: "VIDEO-013",
     shipping_date: "2026-07-13T10:00:00",
@@ -317,7 +328,8 @@ const videos: Video[] = [
     id: 14,
     channel: "@cosmosAberto",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "O telescópio James Webb revela detalhes nunca vistos de galáxias distantes.",
+    description:
+      "O telescópio James Webb revela detalhes nunca vistos de galáxias distantes.",
     liked: true,
     record_code: "VIDEO-014",
     shipping_date: "2026-07-14T10:00:00",
@@ -341,7 +353,8 @@ const videos: Video[] = [
     id: 15,
     channel: "@missaoMarte",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Os desafios científicos e humanos de uma possível colonização de Marte.",
+    description:
+      "Os desafios científicos e humanos de uma possível colonização de Marte.",
     liked: false,
     record_code: "VIDEO-015",
     shipping_date: "2026-07-15T10:00:00",
@@ -389,7 +402,8 @@ const videos: Video[] = [
     id: 17,
     channel: "@ondasCalmas",
     avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Ondas suaves e paisagens costeiras para descansar e se concentrar.",
+    description:
+      "Ondas suaves e paisagens costeiras para descansar e se concentrar.",
     liked: false,
     record_code: "VIDEO-017",
     shipping_date: "2026-07-17T10:00:00",
@@ -460,8 +474,9 @@ const videos: Video[] = [
   {
     id: 20,
     channel: "@pazNatural",
-          avatar_url: "https://github.com/identicons/johndoe.png",
-    description: "Uma manhã tranquila na praia com sons naturais e vento suave.",
+    avatar_url: "https://github.com/identicons/johndoe.png",
+    description:
+      "Uma manhã tranquila na praia com sons naturais e vento suave.",
     liked: true,
     record_code: "VIDEO-020",
     shipping_date: "2026-07-20T10:00:00",
