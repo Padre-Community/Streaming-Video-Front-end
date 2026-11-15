@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* CORES FIXAS */
+
+  --ds-color-brand: #dc2626;
+  --ds-color-brand-hover: #b91c1c;
+  --ds-color-text-on-brand: #ffffff;
+
+  /* PADRÃO/TEMA DARK */
+
+  --ds-color-background: #000000;
+  --ds-color-surface: #121214;
+  --ds-color-surface-secondary: #09090b;
+  --ds-color-border: #2a2729;
+
+  --ds-color-text-primary: #ffffff;
+  --ds-color-text-secondary: #a1a1aa;
+
+  /* TIPOGRAFIA */
+
+  --ds-font-family-body: "Inter", sans-serif;
+  --ds-font-family-heading: "Manrope", sans-serif;
+
+  --ds-font-size-xs: 0.75rem;
+  --ds-font-size-sm: 0.875rem;
+  --ds-font-size-md: 1rem;
+  --ds-font-size-lg: 1.125rem;
+  --ds-font-size-xl: 1.25rem;
+  --ds-font-size-2xl: 1.5rem;
+  --ds-font-size-3xl: 1.875rem;
+  --ds-font-size-4xl: 2.25rem;
+
+  /* BORDER RADIUS */
+
+  --ds-radius-sm: 0.375rem;
+  --ds-radius-md: 0.5rem;
+  --ds-radius-lg: 0.75rem;
+  --ds-radius-xl: 1rem;
+  --ds-radius-2xl: 1.5rem;
+  --ds-radius-full: 9999px;
+
+  /* BANNER */
+
+  --ds-banner-overlay-left: linear-gradient(
+    60deg,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0.85) 35%,
+    rgba(0, 0, 0, 0.2) 60%,
+    transparent 100%
+  );
+
+  --ds-banner-overlay-bottom: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 5%,
+    transparent 100%
+  );
+}
+
+.light {
+  --ds-color-background: #efefef;
+  --ds-color-surface: #efefef;
+  --ds-color-border: #dfdfdf;
+
+  --ds-color-text-primary: #000000;
+  --ds-color-text-secondary: #52525b;
+
+  --ds-banner-overlay-left: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 1) 25%,
+    rgba(255, 255, 255, 0.85) 35%,
+    rgba(255, 255, 255, 0.1) 60%,
+    transparent 100%
+  );
+
+  --ds-banner-overlay-bottom: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.95) 0%,
+    transparent 100%
+  );
+}
+
+@theme {
+  /* CORES */
+
+  --color-background: var(--ds-color-background);
+  --color-surface: var(--ds-color-surface);
+  --color-surface-secondary: var(--ds-color-surface-secondary);
+  --color-border: var(--ds-color-border);
+
+  --color-brand: var(--ds-color-brand);
+  --color-brand-hover: var(--ds-color-brand-hover);
+  --color-text-on-brand: var(--ds-color-text-on-brand);
+
+  --color-text-primary: var(--ds-color-text-primary);
+  --color-text-secondary: var(--ds-color-text-secondary);
+
+  /* TIPOGRAFIA */
+
+  --font-body: var(--ds-font-family-body);
+  --font-heading: var(--ds-font-family-heading);
+
+  --text-xs: var(--ds-font-size-xs);
+  --text-sm: var(--ds-font-size-sm);
+  --text-md: var(--ds-font-size-md);
+  --text-lg: var(--ds-font-size-lg);
+  --text-xl: var(--ds-font-size-xl);
+  --text-2xl: var(--ds-font-size-2xl);
+  --text-3xl: var(--ds-font-size-3xl);
+  --text-4xl: var(--ds-font-size-4xl);
+
+  /* BORDER RADIUS */
+
+  --radius-sm: var(--ds-radius-sm);
+  --radius-md: var(--ds-radius-md);
+  --radius-lg: var(--ds-radius-lg);
+  --radius-xl: var(--ds-radius-xl);
+  --radius-full: var(--ds-radius-full);
+
+  /* BANNER */
+
+  --background-image-banner-overlay-left: var(--ds-banner-overlay-left);
+
+  --background-image-banner-overlay-bottom: var(--ds-banner-overlay-bottom);
+}
+
+@layer base {
+  html,
+  body {
+    background-color: var(--ds-color-background);
+    color: var(--ds-color-text-primary);
+    font-family: var(--ds-font-family-body);
+  }
+}
