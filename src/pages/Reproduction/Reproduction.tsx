@@ -1,5 +1,6 @@
 import { useState } from "react";
 import VideoCard from "../../module/video/components/VideoCard";
+import VideoPlayer from "../../UI/components/VideoPlayer/VideoPlayer";
 import videos from "../../module/video/models/mocks/video-mock";
 import type { Video } from "../../module/video/models/video";
 import { useParams } from "react-router";
@@ -21,14 +22,7 @@ function Reproduction() {
       <div className="flex flex-col gap-4 lg:flex-row">
         {/* Área de reprodução */}
         <section className="flex-1">
-          <div className="aspect-video overflow-hidden rounded-xl bg-black">
-            <video
-              key={videoSelecionado.id}
-              src={videoSelecionado.url}
-              controls
-              className="h-full w-full object-contain"
-            />
-          </div>
+          <VideoPlayer key={videoSelecionado.id} src={videoSelecionado.url} />
 
           {/* Informações do vídeo */}
           <div className="mt-4">
