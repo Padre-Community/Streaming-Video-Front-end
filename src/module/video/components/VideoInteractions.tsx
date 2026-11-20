@@ -1,29 +1,48 @@
 import { ThumbsUp, Eye } from "lucide-react";
 import type { Video } from "../models/video"
 import { useVideoInteractionsViewModel } from "./viewmodels/useVideoInteractionsViewmodel";
+import { formatCompactNumber } from "../utils/formatDate";
 
 
-
-interface VideoInteractionsProps{
+interface VideoInteractionsProps {
     video: Video;
 }
 
 
-function VideoInteractions({video}:VideoInteractionsProps){
+function VideoInteractions({ video }: VideoInteractionsProps) {
 
-    const {liked,
+    const { liked,
         likeCount,
-        toggleLike,}= useVideoInteractionsViewModel(video)
-    return(
-        <div className=" flex items-center gap-4">
+        viewCount,
+        toggleLike,
+    } = useVideoInteractionsViewModel(video)
+    return (
+        <div className=" flex items-center gap-4 mt-4">
 
             <button
                 onClick={toggleLike}
-                className="flex items-center gap-2 p-2 rounded-xl ">
-                    <ThumbsUp 
-                        className={liked? "text-text-primary fill-background" :"text-text-secondary"}/>
-                    <span>{likeCount}</span>
-                </button>
+                type="button"
+                aria-pressed={liked}
+                aria-label={liked ? "Retirar gosto" : "Gostar do video"}
+                className="flex items-center gap-2 px-3 py-2 rounded-full  border-border 
+                transition-colors bg-surface-secondary hover:bg-surface cursor-pointer
+                ">
+                <ThumbsUp
+                    className={liked ? "text-red-500 fill-red-500" : "text-red-500 active:scale-50"} />
+                <span className="text-text-secondary"
+                >{formatCompactNumber(likeCount)}</span>
+            </button>
+
+            <div className="flex gap-2 text-text-secondary border-border px-3 py-2 rounded-full 
+            hover:bg-surface bg-surface-secondary
+            ">
+               <Eye size={20}
+               
+               /> 
+               <div className="text-text-secondary">
+                {formatCompactNumber(viewCount)}
+                </div>
+            </div>
         </div>
     )
 }

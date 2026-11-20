@@ -48,6 +48,7 @@ function Reproduction() {
           </div>
           <div className="">
               <VideoInteractions
+              key={videoSelecionado.id}
               video={videoSelecionado}
               />
           </div>
