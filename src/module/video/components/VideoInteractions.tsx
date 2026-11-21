@@ -2,6 +2,7 @@ import { ThumbsUp, Eye } from "lucide-react";
 import type { Video } from "../models/video"
 import { useVideoInteractionsViewModel } from "./viewmodels/useVideoInteractionsViewmodel";
 import { formatCompactNumber } from "../utils/formatDate";
+import VideoShare from "./VideoShare";
 
 
 interface VideoInteractionsProps {
@@ -28,7 +29,7 @@ function VideoInteractions({ video }: VideoInteractionsProps) {
                 transition-colors bg-surface-secondary hover:bg-surface cursor-pointer
                 ">
                 <ThumbsUp
-                    className={liked ? "text-red-500 fill-red-500" : "text-red-500 active:scale-50"} />
+                    className={liked ? "text-red-500 fill-red-500" : "text-red-500 active:scale-40"} />
                 <span className="text-text-secondary font-semibold"
                 >{formatCompactNumber(likeCount)}</span>
             </button>
@@ -42,6 +43,9 @@ function VideoInteractions({ video }: VideoInteractionsProps) {
                <div className="text-text-secondary font-semibold">
                 {formatCompactNumber(viewCount)}
                 </div>
+            </div>
+            <div className="">
+                <VideoShare video={video}/>
             </div>
         </div>
     )
