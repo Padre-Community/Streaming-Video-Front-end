@@ -24,22 +24,22 @@ function VideoInteractions({ video }: VideoInteractionsProps) {
                 type="button"
                 aria-pressed={liked}
                 aria-label={liked ? "Retirar gosto" : "Gostar do video"}
-                className="flex items-center gap-2 px-3 py-2 rounded-full  border-border 
+                className="flex items-center gap-2 px-3 py-2 rounded-full border border-border 
                 transition-colors bg-surface-secondary hover:bg-surface cursor-pointer
                 ">
                 <ThumbsUp
                     className={liked ? "text-red-500 fill-red-500" : "text-red-500 active:scale-50"} />
-                <span className="text-text-secondary"
+                <span className="text-text-secondary font-semibold"
                 >{formatCompactNumber(likeCount)}</span>
             </button>
 
-            <div className="flex gap-2 text-text-secondary border-border px-3 py-2 rounded-full 
-            hover:bg-surface bg-surface-secondary
+            <div className="flex gap-2 text-text-secondary border border-border px-3 py-2 rounded-full 
+            hover:bg-surface bg-surface-secondary items-center
             ">
                <Eye size={20}
                
                /> 
-               <div className="text-text-secondary">
+               <div className="text-text-secondary font-semibold">
                 {formatCompactNumber(viewCount)}
                 </div>
             </div>
