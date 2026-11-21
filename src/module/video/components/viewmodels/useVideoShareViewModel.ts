@@ -9,7 +9,7 @@ export function useVideoShareViewModel(video: Video){
     async function shareVideo() {
         if(isShareSupported){
           try{
-            await   navigator.share({
+            await  navigator.share({
                 title: video.title,
                 text: video.description,
                 url: window.location.href,
